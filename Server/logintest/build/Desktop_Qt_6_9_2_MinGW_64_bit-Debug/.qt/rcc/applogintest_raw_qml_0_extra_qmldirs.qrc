@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/logintest/">
+    <file alias="qml/qmldir">C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logintest/qml/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,13 @@
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_logintest.qrc
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0.qrc
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc
+/logintest/qml/AppWindow.qml
+/logintest/qml/LoginPage.qml
+/logintest/qml/Main.qml
+/logintest/qml/DashboardPage.qml
+/logintest/qml/NavigationButton.qml
+/logintest/qml/GaugeView.qml
+/logintest/qml/Theme.qml

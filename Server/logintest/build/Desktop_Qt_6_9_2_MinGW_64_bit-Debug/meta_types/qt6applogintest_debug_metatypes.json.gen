@@ -1,0 +1,52 @@
+[
+    {
+        "classes": [
+            {
+                "className": "Backend",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "pw",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "login",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "Backend",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "loginSuccess",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "loginFailed",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "backend.h",
+        "outputRevision": 69
+    }
+]

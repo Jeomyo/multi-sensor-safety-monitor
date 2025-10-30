@@ -1,0 +1,12 @@
+-I
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug
+-I
+C:/Qt/6.9.2/mingw_64/qml
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_logintest.qrc
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0.qrc
+--resource
+C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc
+--module
+logintest

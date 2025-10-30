@@ -1,0 +1,44 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"fill\".",
+                        "functionName": "fill",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "target",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 9,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: stack",
+                        "functionName": "onLoginSuccess",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 9,
+                        "durationMicroseconds": 254,
+                        "errorMessage": "",
+                        "functionName": "onLoginFailed",
+                        "line": 26
+                    }
+                ],
+                "filePath": "C:/project/qt/logintest/qml/AppWindow.qml"
+            }
+        ],
+        "moduleId": "logintest(applogintest)"
+    }
+]

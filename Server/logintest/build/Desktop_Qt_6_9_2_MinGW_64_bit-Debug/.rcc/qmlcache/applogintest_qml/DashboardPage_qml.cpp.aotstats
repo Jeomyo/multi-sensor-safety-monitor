@@ -1,0 +1,84 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 3544,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 13,
+                        "durationMicroseconds": 191,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 9
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 12,
+                        "durationMicroseconds": 1538,
+                        "errorMessage": "Cannot load property colorBgDark from const QMetaObject.",
+                        "functionName": "color",
+                        "line": 10
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 34
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 49
+                    }
+                ],
+                "filePath": "C:/project/qt/logintest/qml/DashboardPage.qml"
+            }
+        ],
+        "moduleId": "logintest(applogintest)"
+    }
+]
