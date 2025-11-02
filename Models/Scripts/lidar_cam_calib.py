@@ -22,16 +22,16 @@ from numpy.linalg import inv
 parameters_cam = {
     "WIDTH": 1280,
     "HEIGHT": 720,
-    "FOV_H": 80.0,
+    "FOV_H": 78.0,
     "FOV_V": 44.0,
     # Camera position in vehicle frame [m]
     "X": -0.2,
     "Y": -0.04,
-    "Z": 0.3,
+    "Z": 1.0,
     # Small misalignment of CAMERA (optical) frame w.r.t vehicle frame [rad]
     # (These are now clean: no axis-mixing; see R_camopt_to_vehicle below)
-    "YAW":  -1.47,   # around +Z_vehicle
-    "PITCH": 0.0,    # around +Y_vehicle
+    "YAW":  0.0,   # around +Z_vehicle
+    "PITCH": 0.4,    # around +Y_vehicle
     "ROLL":  0.0,    # around +X_vehicle
 
     # Optional: extra fine-tuning purely about camera X (optical) axis [deg]
@@ -131,7 +131,7 @@ def getCameraMat(params_cam):
 
     fx = W / (2 * math.tan(math.radians(FOV_h / 2)))
     fy = H / (2 * math.tan(math.radians(FOV_v / 2)))
-    cx, cy = W / 2, H / 2
+    cx, cy = W / 2 - 3 , H / 2 + 40
 
     K = np.array([[fx, 0, cx],
                   [0, fy, cy],
@@ -203,7 +203,7 @@ class LiDARToCameraTransformNode(Node):
         # ROS standard: x = r*cos(theta), y = r*sin(theta), theta increases CCW from +x
         for r in msg.ranges:
             if math.isfinite(r) and r > 0.0:
-                xs.append(r * math.cos(angle))  # forward
+                xs.append(-r * math.cos(angle))  # forward
                 ys.append(r * math.sin(angle))  # left
             angle += msg.angle_increment
 
