@@ -428,24 +428,9 @@ I (xxxx) main: 🌡️  온도: 25.4°C, 💧 습도: 47%
 - **MongoDB**: 최신 버전
 - **플랫폼**: Windows/Linux/macOS
 
----
+- ## 참고자료
+<img width="567" height="383" alt="image" src="https://github.com/user-attachments/assets/912915aa-44a8-42b8-a66c-3fb30dd48729" />
+<img width="567" height="382" alt="image" src="https://github.com/user-attachments/assets/d0f82047-6a47-4daf-bbe8-875f46b06b73" />
+<img width="567" height="657" alt="image" src="https://github.com/user-attachments/assets/7a3bd396-9ea0-4680-8f7d-130074893e4a" />
 
-## 📝 라이선스
-
-이 프로젝트는 교육 및 연구 목적으로 개발되었습니다.
-
----
-
-## 👥 기여
-
-이슈 및 개선 사항은 GitHub Issues를 통해 제안해주세요.
-
----
-
-## 📞 문의
-
-기술적 문의사항이 있으시면 GitHub Issues를 통해 문의해주세요.
-
----
-
-**마지막 업데이트**: 2024년 11월
+- 
