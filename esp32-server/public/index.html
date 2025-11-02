@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ESP32 대시보드</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans KR",sans-serif;background:#0f172a;color:#e2e8f0;margin:0}
+    .wrap{max-width:980px;margin:40px auto;padding:0 16px}
+    .card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:20px;margin-bottom:16px}
+    h1{font-size:22px;margin:0 0 12px}
+    .row{display:flex;gap:16px;flex-wrap:wrap}
+    .col{flex:1 1 300px}
+    .led{width:18px;height:18px;border-radius:50%;display:inline-block;margin-right:8px;vertical-align:middle;border:2px solid #000}
+    .led.on{background:#22c55e;box-shadow:0 0 10px #22c55e}
+    .led.off{background:#ef4444;box-shadow:0 0 10px #ef4444}
+    button{background:#2563eb;color:#fff;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
+    button.secondary{background:#374151}
+    pre{white-space:pre-wrap;background:#0b1220;border:1px solid #1f2937;border-radius:8px;padding:12px;max-height:220px;overflow:auto}
+    .muted{opacity:.75}
+    /* 2D 트윈 스타일 */
+    .twin-legend{display:flex;gap:10px;align-items:center;margin-top:8px;font-size:12px;opacity:.85}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid #334155}
+    .ok{background:#052e1c;color:#22c55e;border-color:#14532d}
+    .warn{background:#2f1f01;color:#f59e0b;border-color:#854d0e}
+    .err{background:#3b0d0d;color:#ef4444;border-color:#7f1d1d}
+    svg text{fill:#cbd5e1;font-size:12px}
+    .node{stroke:#334155;stroke-width:2;fill:#0b1220}
+    .node.ok{stroke:#22c55e}
+    .node.err{stroke:#ef4444}
+    .link{stroke:#475569;stroke-width:3}
+    .link.ok{stroke:#22c55e}
+    .link.err{stroke:#ef4444}
+    /* 산업안전 KPI/알람 */
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .kpi{background:#0b1220;border:1px solid #1f2937;border-radius:10px;padding:14px}
+    .kpi h3{margin:0 0 6px;font-size:14px;color:#cbd5e1}
+    .kpi .val{font-size:22px;font-weight:700}
+    .kpi .unit{font-size:12px;opacity:.8;margin-left:4px}
+    .kpi.warn{border-color:#854d0e;box-shadow:0 0 0 1px #f59e0b33 inset}
+    .kpi.err{border-color:#7f1d1d;box-shadow:0 0 0 1px #ef444433 inset}
+    .banner{display:none;margin-bottom:12px;padding:10px 12px;border-radius:10px;border:1px solid #7f1d1d;background:#3b0d0d;color:#fecaca}
+    .banner.show{display:block}
+  /* ZONE 편집 핸들 */
+  .zone-rect{pointer-events:none}
+  .zone-group.editable{cursor:move}
+  .handle{fill:#22c55e;stroke:#0b1220;stroke-width:1;cursor:nwse-resize}
+  .handle.n,.handle.s{cursor:ns-resize}
+  .handle.e,.handle.w{cursor:ew-resize}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>ESP32 대시보드</h1>
+      <div class="muted">실시간 상태 표시 및 가상 LED</div>
+    </div>
+
+    <div id="banner" class="banner">위험 알람: 임계치 초과 감지됨. 즉시 확인하세요.</div>
+
+    <div class="row">
+      <div class="card col">
+        <h2 style="margin-top:0;font-size:18px">가상 LED</h2>
+        <div>
+          <span id="led" class="led off"></span>
+          <span id="ledText">OFF</span>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button id="btnOn">LED 켜기</button>
+          <button id="btnOff" class="secondary">LED 끄기</button>
+        </div>
+      </div>
+
+      <div class="card col">
+        <h2 style="margin-top:0;font-size:18px">시스템 정보</h2>
+        <div id="sys"></div>
+        <div style="margin-top:12px"><button id="btnRefresh" class="secondary">새로고침</button></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">산업안전 KPI</h2>
+      <div class="grid">
+        <div id="kpi-gas" class="kpi"><h3>가스 농도</h3><div class="val"><span id="gasVal">-</span><span class="unit">ppm</span></div></div>
+        <div id="kpi-temp" class="kpi"><h3>온도</h3><div class="val"><span id="tempVal">-</span><span class="unit">°C</span></div></div>
+        <div id="kpi-humi" class="kpi"><h3>습도</h3><div class="val"><span id="humiVal">-</span><span class="unit">%</span></div></div>
+        <div id="kpi-motion" class="kpi"><h3>동작 감지</h3><div class="val"><span id="motVal">-</span></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">서버 연동 트윈</h2>
+      <svg id="twin" viewBox="0 0 1000 260" style="width:100%;height:auto;background:#0b1220;border-radius:8px;border:1px solid #1f2937">
+        <g id="node-server">
+          <rect class="node ok" x="80" y="80" width="140" height="100" rx="12" />
+          <text x="150" y="110" text-anchor="middle">Server</text>
+          <text id="server-url" x="150" y="130" text-anchor="middle">http://localhost:3002</text>
+          <text id="server-status" x="150" y="150" text-anchor="middle">OK</text>
+        </g>
+        <g id="node-esp">
+          <rect class="node ok" x="740" y="80" width="180" height="100" rx="12" />
+          <text x="830" y="110" text-anchor="middle">ESP32</text>
+          <text id="esp-url" x="830" y="130" text-anchor="middle">장치</text>
+        </g>
+        <line id="link-server-esp" class="link" x1="220" y1="130" x2="740" y2="130" />
+      </svg>
+      <div class="twin-legend">
+        <span class="badge ok">OK</span>
+        <span class="badge warn">WARN</span>
+        <span class="badge err">ERROR</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">공간 지도 트윈</h2>
+      <svg id="twinMap" viewBox="0 0 1000 500" style="width:100%;height:auto;background:#0b1220;border-radius:8px;border:1px solid #1f2937"></svg>
+      <div class="muted" style="margin-top:8px">편집 모드에서 드래그/핸들로 리사이즈, 격자 스냅 적용</div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">MQTT 수신 로그</h2>
+      <pre id="log"></pre>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">ZONE 편집</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <button id="btnZonesLoad" class="secondary">불러오기</button>
+        <button id="btnZonesAdd" class="secondary">존 추가</button>
+        <button id="btnZonesSave">저장</button>
+        <label class="secondary" style="margin-left:auto;padding:6px 8px;border-radius:8px;background:#0b1220;border:1px solid #1f2937">격자 스냅: <input id="gridSize" type="number" value="10" min="1" style="width:64px"> px</label>
+        <label class="secondary" style="padding:6px 8px;border-radius:8px;background:#0b1220;border:1px solid #1f2937">편집 모드 <input id="editToggle" type="checkbox"></label>
+      </div>
+      <div style="overflow:auto">
+        <table id="tblZones" style="width:100%;border-collapse:collapse">
+          <thead><tr><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">ID</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">Name</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">x</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">y</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">w</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">h</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">삭제</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;font-size:18px">알람 이력</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <input id="fltDevice" placeholder="deviceId (기본 esp32-001)" style="flex:1;min-width:180px"/>
+        <select id="fltLevel"><option value="">level(전체)</option><option>debug</option><option>info</option><option>warn</option><option>error</option></select>
+        <input id="fltFrom" type="datetime-local"/>
+        <input id="fltTo" type="datetime-local"/>
+        <button id="btnLoadEvents" class="secondary">조회</button>
+      </div>
+      <div style="overflow:auto">
+        <table id="tblEvents" style="width:100%;border-collapse:collapse">
+          <thead><tr><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">시간</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">레벨</th><th style="text-align:left;border-bottom:1px solid #1f2937;padding:6px">메시지</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-Ay0YlNfNQkXK1k8nQ0m0e2tt+uV7G6jR6b7UuE8rV6b8w0YV3Xj0wXrXk7o1qR3f" crossorigin="anonymous"></script>
+  <script>
+    const logEl = document.getElementById('log');
+    const ledEl = document.getElementById('led');
+    const ledText = document.getElementById('ledText');
+    const sysEl = document.getElementById('sys');
+    const twin = {
+      serverUrl: document.getElementById('server-url'),
+      serverStatus: document.getElementById('server-status'),
+      linkZ1: document.getElementById('link-server-z1'),
+      linkZ2: document.getElementById('link-server-z2'),
+      z1Led: document.getElementById('z1-led'),
+      z2Led: document.getElementById('z2-led'),
+      z1Url: document.getElementById('z1-url'),
+      z2Url: document.getElementById('z2-url')
+    };
+
+    // 산업안전 KPI 요소
+    const banner = document.getElementById('banner');
+    const el = {
+      gas: document.getElementById('gasVal'),
+      temp: document.getElementById('tempVal'),
+      humi: document.getElementById('humiVal'),
+      mot: document.getElementById('motVal'),
+      kGas: document.getElementById('kpi-gas'),
+      kTemp: document.getElementById('kpi-temp'),
+      kHumi: document.getElementById('kpi-humi'),
+      kMot: document.getElementById('kpi-motion')
+    };
+
+    // 임계치 설정 (예시)
+    let TH = { gas: 200, temp: 50, humi: {min: 20, max: 85} };
+
+    async function loadConfig(){
+      try{
+        const r = await fetch('/api/config');
+        const c = await r.json();
+        if(c && c.thresholds){ TH = c.thresholds; }
+      }catch(_){ }
+    }
+
+    function appendLog(line){
+      const t = new Date().toLocaleTimeString();
+      logEl.textContent += `[${t}] ${line}\n`;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function setLed(state){
+      if(state){
+        ledEl.classList.add('on');
+        ledEl.classList.remove('off');
+        ledText.textContent = 'ON';
+        twin.ledCircle.setAttribute('fill', '#22c55e');
+        twin.link.setAttribute('class','link ok');
+      }else{
+        ledEl.classList.add('off');
+        ledEl.classList.remove('on');
+        ledText.textContent = 'OFF';
+        twin.ledCircle.setAttribute('fill', '#ef4444');
+        twin.link.setAttribute('class','link');
+      }
+    }
+
+    async function refreshSystem(){
+      try{
+        const res = await fetch('/api/system/info');
+        const data = await res.json();
+        sysEl.innerHTML = `<div>Server: ${data.server}</div>
+          <div>ESP32: ${data.esp32.baseUrl}</div>
+          <div>MQTT: ${data.mqtt.broker}:${data.mqtt.port} (${data.mqtt.connected?'connected':'disconnected'})</div>
+          <div>DB: ${data.database.connected?'connected':'disconnected'}</div>`;
+        // 2D 트윈 반영
+        twin.serverUrl.textContent = window.location.origin;
+        twin.espUrl.textContent = data.esp32.baseUrl;
+        twin.serverStatus.textContent = 'OK';
+        twin.espStatus.textContent = data.mqtt.connected ? 'OK' : 'WARN';
+        document.getElementById('node-server').querySelector('rect').setAttribute('class','node ok');
+        document.getElementById('node-esp').querySelector('rect').setAttribute('class', data.mqtt.connected?'node ok':'node');
+      }catch(e){
+        sysEl.textContent = '시스템 정보 조회 실패';
+        document.getElementById('node-server').querySelector('rect').setAttribute('class','node err');
+        document.getElementById('node-esp').querySelector('rect').setAttribute('class','node err');
+        twin.serverStatus.textContent = 'ERROR';
+        twin.espStatus.textContent = 'ERROR';
+        twin.link.setAttribute('class','link err');
+      }
+    }
+
+    document.getElementById('btnRefresh').onclick = refreshSystem;
+    document.getElementById('btnOn').onclick = async ()=>{
+      try{ await fetch('/api/esp32/led',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({state:true})}); }catch(e){}
+      setLed(true);
+    };
+    document.getElementById('btnOff').onclick = async ()=>{
+      try{ await fetch('/api/esp32/led',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({state:false})}); }catch(e){}
+      setLed(false);
+    };
+
+    // 소켓 연결 및 MQTT 메시지 반영
+    const socket = io();
+    let alarmAudio = null; try{ alarmAudio = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABYBHwAA'); }catch(_){}
+    function playAlarm(){ try{ if(alarmAudio){ alarmAudio.currentTime=0; alarmAudio.play(); } }catch(_){} }
+    socket.on('connect', ()=> appendLog('소켓 연결'));
+    socket.on('server-status', (m)=> appendLog(`서버 상태: ${m.message}`));
+    socket.on('mqtt-message', (m)=>{
+      appendLog(`MQTT [${m.topic}] ${m.message}`);
+      if(m.topic==='esp32/status'){
+        try{
+          const o = JSON.parse(m.message);
+          if(typeof o.led==='boolean') setLed(o.led);
+        }catch(_){ /* 문자열 Alive 등은 무시 */ }
+      }
+      // 센서 토픽 예시: esp32/sensors { gas:123, temp:26.5, humi:48, motion:true }
+      if(m.topic==='esp32/sensors'){
+        try{
+          const s = JSON.parse(m.message);
+          if(typeof s.gas==='number'){ el.gas.textContent = s.gas; el.kGas.className = 'kpi ' + (s.gas>TH.gas?'err':''); }
+          if(typeof s.temp==='number'){ el.temp.textContent = s.temp.toFixed(1); el.kTemp.className = 'kpi ' + (s.temp>TH.temp?'warn':''); }
+          if(typeof s.humi==='number'){ el.humi.textContent = s.humi.toFixed(0); const bad=(s.humi<TH.humi.min||s.humi>TH.humi.max); el.kHumi.className = 'kpi ' + (bad?'warn':''); }
+          if(typeof s.motion==='boolean'){ el.mot.textContent = s.motion? '감지됨' : '없음'; el.kMot.className = 'kpi ' + (s.motion?'warn':''); }
+          // 배너 노출 조건: 가스 초과 또는 온도 초과 => 알람 저장 호출
+          const alarm = (s.gas>TH.gas) || (s.temp>TH.temp);
+          banner.className = 'banner' + (alarm?' show':'');
+          if(alarm){ playAlarm(); try{ fetch('/api/alarms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'Threshold exceeded', level: s.gas>TH.gas?'error':'warn', metadata:s})}); }catch(_){}}
+        }catch(_){ }
+      }
+    });
+
+    // 임계치 컨트롤 UI
+    const ctrlHtml = `
+      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+        <div><label>가스(ppm) <input id="thGas" type="number" min="0" style="width:100%"/></label></div>
+        <div><label>온도(°C) <input id="thTemp" type="number" min="-50" max="150" style="width:100%"/></label></div>
+        <div style="display:flex;gap:6px"><label style="flex:1">습도 최소 <input id="thHMin" type="number" min="0" max="100" style="width:100%"/></label><label style="flex:1">습도 최대 <input id="thHMax" type="number" min="0" max="100" style="width:100%"/></label></div>
+        <div style="grid-column:1/4;text-align:right"><button id="btnSaveTh" class="secondary">임계치 저장</button></div>
+      </div>`;
+    document.querySelector('.card.col:last-of-type').insertAdjacentHTML('beforeend', ctrlHtml);
+
+    async function loadConfig(){
+      try{
+        const r = await fetch('/api/config');
+        const c = await r.json();
+        if(c && c.thresholds){ TH = c.thresholds; }
+        // 컨트롤 값 반영
+        document.getElementById('thGas').value = TH.gas;
+        document.getElementById('thTemp').value = TH.temp;
+        document.getElementById('thHMin').value = TH.humi.min;
+        document.getElementById('thHMax').value = TH.humi.max;
+      }catch(_){ }
+    }
+
+    document.addEventListener('click', async (e)=>{
+      if(e.target && e.target.id==='btnSaveTh'){
+        const body = { thresholds: {
+          gas: parseFloat(document.getElementById('thGas').value),
+          temp: parseFloat(document.getElementById('thTemp').value),
+          humi: { min: parseFloat(document.getElementById('thHMin').value), max: parseFloat(document.getElementById('thHMax').value) }
+        } };
+        try{ await fetch('/api/config',{ method:'PATCH', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) }); appendLog('임계치 저장 완료'); }catch(_){ appendLog('임계치 저장 실패'); }
+      }
+    });
+
+    // 초기 로드
+    (async ()=>{ await loadConfig(); await refreshSystem(); })();
+
+    async function loadEvents(){
+      const params = new URLSearchParams();
+      const device = document.getElementById('fltDevice').value || 'esp32-001';
+      const level = document.getElementById('fltLevel').value || '';
+      const from = document.getElementById('fltFrom').value || '';
+      const to = document.getElementById('fltTo').value || '';
+      params.set('deviceId', device);
+      if(level) params.set('level', level);
+      if(from) params.set('from', from);
+      if(to) params.set('to', to);
+      const r = await fetch('/api/system/events?'+params.toString());
+      const j = await r.json();
+      const tb = document.querySelector('#tblEvents tbody');
+      tb.innerHTML = '';
+      (j.data||[]).forEach(ev=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td style="border-bottom:1px solid #1f2937;padding:6px">${new Date(ev.timestamp).toLocaleString()}</td><td style="border-bottom:1px solid #1f2937;padding:6px">${ev.level}</td><td style="border-bottom:1px solid #1f2937;padding:6px">${ev.message}</td>`;
+        tb.appendChild(tr);
+      });
+    }
+    document.getElementById('btnLoadEvents').onclick = loadEvents;
+  </script>
+</body>
+</html>

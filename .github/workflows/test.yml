@@ -1,0 +1,160 @@
+name: CI 테스트 및 정적 분석
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  static-analysis:
+    name: 정적 분석
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: cppcheck 설치
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck
+    
+    - name: cppcheck 실행
+      run: |
+        cppcheck --enable=all \
+          --suppress=missingIncludeSystem \
+          --suppress=unusedFunction \
+          --xml --xml-version=2 \
+          --output-file=cppcheck_report.xml \
+          -I main/include \
+          main/*.c main/test/*.c || true
+    
+    - name: cppcheck 리포트 업로드
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: cppcheck-report
+        path: cppcheck_report.xml
+    
+    - name: clang-tidy 설치
+      run: |
+        sudo apt-get install -y clang-tidy
+    
+    - name: ESP-IDF 설정
+      uses: espressif/esp-idf-ci-action@v1
+      with:
+        esp_idf_version: v5.1
+    
+    - name: 빌드 (compile_commands.json 생성)
+      run: |
+        idf.py build
+    
+    - name: clang-tidy 실행
+      run: |
+        clang-tidy -p build main/*.c -- -I main/include || true
+      continue-on-error: true
+
+  unit-tests:
+    name: 유닛 테스트
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: ESP-IDF 설정
+      uses: espressif/esp-idf-ci-action@v1
+      with:
+        esp_idf_version: v5.1
+    
+    - name: 테스트 실행
+      run: |
+        idf.py test
+      continue-on-error: true
+    
+    - name: 테스트 결과 업로드
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: build/test/
+
+  integration-tests:
+    name: 통합 테스트 (Python)
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Python 설정
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: 의존성 설치
+      run: |
+        pip install pytest requests
+        cd esp32-server
+        npm install || true
+    
+    - name: 서버 시작 (백그라운드)
+      run: |
+        cd esp32-server
+        npm start &
+        sleep 5
+    
+    - name: 통합 테스트 실행
+      run: |
+        pytest tests/ -v
+      continue-on-error: true
+    
+    - name: 테스트 리포트 업로드
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: pytest-results
+        path: pytest-results.xml
+
+  code-quality:
+    name: 코드 품질 검사
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: ESP-IDF 설정
+      uses: espressif/esp-idf-ci-action@v1
+      with:
+        esp_idf_version: v5.1
+    
+    - name: 빌드
+      run: |
+        idf.py build
+    
+    - name: 테스트 커버리지 설정
+      run: |
+        idf.py menuconfig
+        # Component config -> Component -> Unit test configuration -> Enable coverage
+    
+    - name: 커버리지 빌드
+      run: |
+        idf.py build
+    
+    - name: 커버리지 테스트 실행
+      run: |
+        idf.py test
+    
+    - name: 커버리지 리포트 생성
+      run: |
+        lcov --capture \
+          --directory build \
+          --output-file coverage.info \
+          --no-external
+    
+    - name: 커버리지 리포트 업로드
+      uses: codecov/codecov-action@v3
+      with:
+        file: coverage.info
+        flags: unittests
+        name: codecov-umbrella
+
+
