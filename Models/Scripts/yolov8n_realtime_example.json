@@ -1,0 +1,51 @@
+{
+ "description": "run yolo detector",
+ "usage": "detection",
+ "model": {
+ "path": "/home/jeomyo/Downloads/best.dxnn",
+ "param": {
+ "name": "YoloV8N",
+ "input_width" : 640,
+ "input_height" : 640,
+ "score_threshold": 0.3,
+ "iou_threshold": 0.4,
+ "last_activation": "sigmoid",
+ "decoding_method": "yolov8",
+ "box_format": "center",
+ "final_outputs":[
+ "output0"
+ ],
+ "layer": [
+ {
+ "name": "output0",
+ "shape":[1, 14, 8400]
+ }
+ ]
+ }
+ },
+ "input": {
+ "format": "RGB",
+ "sources":[
+ {
+  "type": "video",
+  "path": "rtsp://admin:qw12qw12%21@192.168.0.64:554/stream1 protocols=udp latency=20 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! appsink drop=1 max-buffers=1 sync=false"
+ }
+ ]
+ },
+ "output": {
+ "description": "output type is used for post processing, that yolo, ssd, etc...",
+"classes":["Hardhat", "Mask", "NO-Hardhat", "NO-Mask", "NO-Safety Vest", "Person", "Safety Cone", "Safety Vest", "machinery", "vehicle"],
+ "type": "yolo"
+ },
+ "application": {
+ "description": "result of post-processing after inference, you can use \"save\" or \"realtime\" or \"none\"",
+ "type": "realtime",
+ "resolution": [
+ 960,
+ 540
+ ]
+ }
+ }
+
+
+
