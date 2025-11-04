@@ -74,7 +74,6 @@ CMakeFiles/applogintest_copy_qml: .qt/applogintest_qml.txt
 .qt/applogintest_qml.txt: C:/project/qt/logintest/qml/DashboardPage.qml
 .qt/applogintest_qml.txt: C:/project/qt/logintest/qml/NavigationButton.qml
 .qt/applogintest_qml.txt: C:/project/qt/logintest/qml/GaugeView.qml
-.qt/applogintest_qml.txt: C:/project/qt/logintest/qml/Theme.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying applogintest qml sources into build dir"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/applogintest_qml.cmake -P C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

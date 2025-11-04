@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   ".rcc/qmlcache/applogintest_qml/Main_qml.cpp.aotstats"
   ".rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp"
   ".rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats"
-  ".rcc/qmlcache/applogintest_qml/Theme_qml.cpp"
-  ".rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats"
   ".rcc/qmlcache/module_applogintest.aotstats"
   "CMakeFiles/module_applogintest_aotstats_target"
 )

@@ -611,30 +611,6 @@ build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Navigat
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\applogintest.dir\build.make CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.s
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.s
 
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\applogintest.dir\build.make CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\applogintest.dir\build.make CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\applogintest.dir\build.make CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s
-
 build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.obj
 
@@ -743,9 +719,6 @@ help:
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.s
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.s

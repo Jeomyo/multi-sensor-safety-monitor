@@ -72,7 +72,6 @@ CMakeFiles/applogintest_qmllint_module: C:/project/qt/logintest/qml/Main.qml
 CMakeFiles/applogintest_qmllint_module: C:/project/qt/logintest/qml/DashboardPage.qml
 CMakeFiles/applogintest_qmllint_module: C:/project/qt/logintest/qml/NavigationButton.qml
 CMakeFiles/applogintest_qmllint_module: C:/project/qt/logintest/qml/GaugeView.qml
-CMakeFiles/applogintest_qmllint_module: C:/project/qt/logintest/qml/Theme.qml
 CMakeFiles/applogintest_qmllint_module: .rcc/qmllint/applogintest_module.rsp
 	cd /d C:\project\qt\logintest && call C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmllint.exe @C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmllint/applogintest_module.rsp
 

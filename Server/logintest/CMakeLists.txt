@@ -26,7 +26,7 @@ qt_add_qml_module(applogintest
         qml/DashboardPage.qml
         qml/NavigationButton.qml
         qml/GaugeView.qml
-        qml/Theme.qml
+
 )
 
 target_link_libraries(applogintest

@@ -67,16 +67,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "applogintest_qmlimportscan::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 5,
 			"id" : "applogintest_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 7,
 			"id" : "applogintest_copy_qml::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "applogintest_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 

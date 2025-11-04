@@ -2,13 +2,12 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import logintest 1.0
+// import "../qml"
 
-Window {
-    width: 1000
-    height: 600
-    visible: true
-    title: qsTr("Smart Factory Dashboard")
-    color: Theme.colorBgDark
+Rectangle {
+    id: mainRoot
+    anchors.fill: parent
+    color: "#202531"
 
     property string selectedMenu: "대시보드 홈"
 
@@ -19,7 +18,7 @@ Window {
         Rectangle {
             Layout.preferredWidth: 200
             Layout.fillHeight: true
-            color: Theme.colorBgCard
+            color: "#2A303C"
 
             NavigationButton {
                 text: "대시보드 홈"
@@ -48,7 +47,7 @@ Window {
             id: mainArea
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: Theme.colorBgDark
+            color: "#202531"
 
             Loader {
                 id: pageLoader
@@ -70,9 +69,8 @@ Window {
 
             Component {
                 id: mapPage
-
                 Rectangle {
-                    color: Theme.colorBgDark
+                    color: "#202531"
 
                     // 제목
                     Text {
@@ -127,17 +125,16 @@ Window {
                         x: 300
                         y: 300
 
-                        // Tooltip 효과
                         ToolTip.visible: ma.containsMouse
                         ToolTip.text: "작업자 A (안전모 미착용)"
                         MouseArea { id: ma; anchors.fill: parent; hoverEnabled: true }
                     }
 
+                    // 👷‍ 작업자 B (안전모 착용)
                     Text {
                         text: "👷‍"
                         color: "white"
                         font.pixelSize: 22
-
                         x: 400
                         y: 300
                         anchors.topMargin: 30
@@ -146,11 +143,12 @@ Window {
                         MouseArea { id: mb; anchors.fill: parent; hoverEnabled: true }
                     }
 
+                    // 🪖 안전모 이미지
                     Image {
-                        source: "qrc:/images/helmet.png"   // 리소스 파일 경로
-                        width: 32                          // 이미지 크기 조정
+                        source: "qrc:/images/helmet.png"
+                        width: 32
                         height: 32
-                        x: 420                             // 위치 (작업자 B 근처)
+                        x: 420
                         y: 295
                         smooth: true
                         visible: true
@@ -162,13 +160,10 @@ Window {
                 }
             }
 
-
-
             Component {
                 id: analysisPage
-
                 Rectangle {
-                    color: Theme.colorBgDark
+                    color: "#202531"
 
                     Column {
                         anchors.centerIn: parent
@@ -243,7 +238,6 @@ Window {
                                 }
                             }
                         }
-
                     }
                 }
             }

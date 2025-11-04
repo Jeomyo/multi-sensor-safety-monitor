@@ -3,13 +3,14 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Shapes
 import logintest 1.0
+// import "../qml"
 
 Rectangle {
     id: gauge
     width: 200
     height: 200
     radius: width / 2
-    color: Theme.colorBgCard
+    color: "#2A303C"
     border.color: "#222"
     border.width: 1
     // anchors.centerIn: parent
@@ -90,7 +91,7 @@ Rectangle {
 
         Text {
             text: Math.round(gauge.value) + " " + gauge.unit
-            color: Theme.colorTextLight
+            color: "#E0E0E0"
             font.pixelSize: 26
             font.bold: true
             horizontalAlignment: Text.AlignHCenter

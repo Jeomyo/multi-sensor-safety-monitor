@@ -4,124 +4,100 @@
             {
                 "entries": [
                     {
-                        "codegenSuccessful": false,
-                        "column": 12,
-                        "durationMicroseconds": 1150,
-                        "errorMessage": "Cannot load property colorBgDark from const QMetaObject.",
-                        "functionName": "color",
-                        "line": 11
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 9
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 130,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 16
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot load property colorBgCard from const QMetaObject.",
-                        "functionName": "color",
-                        "line": 22
+                        "line": 15
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 210,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
                         "line": 27
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 32,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 28
+                        "column": 29,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 33
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 26,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
+                        "column": 28,
+                        "durationMicroseconds": 21,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
                         "line": 34
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 35
+                        "column": 29,
+                        "durationMicroseconds": 22,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 40
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 23,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
+                        "column": 28,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
                         "line": 41
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 42
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 16,
-                        "errorMessage": "Cannot load property colorBgDark from const QMetaObject.",
-                        "functionName": "color",
-                        "line": 51
-                    },
-                    {
-                        "codegenSuccessful": false,
                         "column": 34,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 110,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "sourceComponent",
-                        "line": 57
+                        "line": 56
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 55
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot load property colorBgDark from const QMetaObject.",
-                        "functionName": "color",
-                        "line": 75
+                        "line": 54
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 38,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 82
+                        "line": 80
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 83
+                        "line": 81
                     },
                     {
                         "codegenSuccessful": true,
@@ -129,39 +105,39 @@
                         "durationMicroseconds": 32,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 90
+                        "line": 88
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "x",
-                        "line": 105
+                        "line": 103
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "y",
-                        "line": 106
+                        "line": 104
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "x",
-                        "line": 115
+                        "line": 113
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "y",
-                        "line": 116
+                        "line": 114
                     },
                     {
                         "codegenSuccessful": false,
@@ -169,15 +145,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"visible\".",
                         "functionName": "visible",
-                        "line": 131
+                        "line": 128
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 59,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 133
+                        "line": 130
                     },
                     {
                         "codegenSuccessful": false,
@@ -185,15 +161,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"visible\".",
                         "functionName": "visible",
-                        "line": 144
+                        "line": 141
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 59,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 146
+                        "line": 143
                     },
                     {
                         "codegenSuccessful": true,
@@ -201,7 +177,7 @@
                         "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "fillMode",
-                        "line": 157
+                        "line": 155
                     },
                     {
                         "codegenSuccessful": false,
@@ -209,47 +185,71 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"visible\".",
                         "functionName": "visible",
-                        "line": 158
+                        "line": 156
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 59,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 160
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 14,
-                        "errorMessage": "Cannot load property colorBgDark from const QMetaObject.",
-                        "functionName": "color",
-                        "line": 171
+                        "line": 158
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 174
+                        "line": 169
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 55,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 183
+                        "line": 178
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 196
+                        "line": 191
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 63,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 199
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 63,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 207
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 63,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 215
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 63,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 222
                     },
                     {
                         "codegenSuccessful": true,
@@ -257,23 +257,7 @@
                         "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 204
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 63,
-                        "durationMicroseconds": 55,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 212
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 63,
-                        "durationMicroseconds": 56,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 220
+                        "line": 230
                     },
                     {
                         "codegenSuccessful": true,
@@ -281,23 +265,7 @@
                         "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 227
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 63,
-                        "durationMicroseconds": 70,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 235
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 63,
-                        "durationMicroseconds": 56,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 242
+                        "line": 237
                     }
                 ],
                 "filePath": "C:/project/qt/logintest/qml/Main.qml"

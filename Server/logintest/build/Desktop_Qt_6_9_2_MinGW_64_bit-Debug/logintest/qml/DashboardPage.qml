@@ -2,12 +2,13 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import logintest 1.0
+// import "../qml"
 
 Rectangle {
     id: dashboard
     width: parent ? parent.width : 1000
     height: parent ? parent.height : 600
-    color: Theme.colorBgDark   // ✅ 다크 배경 유지
+    color: "#1E1F25"   // ✅ 다크 배경 유지
 
     // 🌡💧 온습도 종합 점수 게이지
     GaugeView {

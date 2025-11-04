@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import logintest 1.0
+// import "../qml"
 
 Rectangle {
     id: root
@@ -19,9 +20,9 @@ Rectangle {
 
     // ✅ 색상 로직을 한 곳에서만 관리 (항상 최신 상태 반영)
     color: {
-        if (isSelected) return Theme.colorAccent
-        if (hovered) return Theme.colorBgCard
-        return Theme.colorBgDark
+        if (isSelected) return "#3E4554"
+        if (hovered) return "#2A303C"
+        return "#202531"
     }
 
     MouseArea {
@@ -41,7 +42,7 @@ Rectangle {
         Label {
             id: label
             anchors.centerIn: parent
-            color: Theme.colorTextLight
+            color: "#E0E0E0"
             text: "대시보드"
         }
     }

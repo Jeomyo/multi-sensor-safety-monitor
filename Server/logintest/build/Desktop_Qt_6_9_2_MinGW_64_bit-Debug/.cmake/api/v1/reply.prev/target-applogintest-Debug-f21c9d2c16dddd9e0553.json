@@ -411,7 +411,7 @@
 			{
 				"command" : 13,
 				"file" : 10,
-				"line" : 3607,
+				"line" : 3613,
 				"parent" : 61
 			},
 			{
@@ -423,7 +423,7 @@
 			{
 				"command" : 13,
 				"file" : 10,
-				"line" : 3613,
+				"line" : 3607,
 				"parent" : 61
 			},
 			{
@@ -1079,11 +1079,11 @@
 	[
 		{
 			"backtrace" : 63,
-			"id" : "applogintest_copy_qml::@6890427a1f51a3e7e1df"
+			"id" : "applogintest_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 65,
-			"id" : "applogintest_copy_res::@6890427a1f51a3e7e1df"
+			"id" : "applogintest_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 72,

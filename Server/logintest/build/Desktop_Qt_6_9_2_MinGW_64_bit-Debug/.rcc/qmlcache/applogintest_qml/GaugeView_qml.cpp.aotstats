@@ -6,26 +6,18 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 750,
+                        "durationMicroseconds": 284,
                         "errorMessage": "",
                         "functionName": "radius",
-                        "line": 11
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 12,
-                        "durationMicroseconds": 2698,
-                        "errorMessage": "Cannot load property colorBgCard from const QMetaObject.",
-                        "functionName": "color",
                         "line": 12
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 128,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "progressColor",
-                        "line": 24
+                        "line": 25
                     },
                     {
                         "codegenSuccessful": false,
@@ -33,103 +25,31 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getColor",
-                        "line": 118
+                        "line": 119
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 31
+                        "line": 32
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "capStyle",
-                        "line": 35
+                        "line": 36
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "startX",
-                        "line": 38
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 21,
-                        "durationMicroseconds": 20,
-                        "errorMessage": "Cannot access value for name height",
-                        "functionName": "startY",
                         "line": 39
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "Cannot access value for name width",
-                        "functionName": "centerX",
-                        "line": 41
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 26,
-                        "errorMessage": "Cannot access value for name height",
-                        "functionName": "centerY",
-                        "line": 42
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name width",
-                        "functionName": "radiusX",
-                        "line": 43
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name height",
-                        "functionName": "radiusY",
-                        "line": 44
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 44,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 56
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 26,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "",
-                        "functionName": "strokeColor",
-                        "line": 58
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "",
-                        "functionName": "capStyle",
-                        "line": 60
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 21,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name width",
-                        "functionName": "startX",
-                        "line": 63
                     },
                     {
                         "codegenSuccessful": false,
@@ -137,86 +57,150 @@
                         "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name height",
                         "functionName": "startY",
+                        "line": 40
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "Cannot access value for name width",
+                        "functionName": "centerX",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 17,
+                        "errorMessage": "Cannot access value for name height",
+                        "functionName": "centerY",
+                        "line": 43
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 21,
+                        "errorMessage": "Cannot access value for name width",
+                        "functionName": "radiusX",
+                        "line": 44
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name height",
+                        "functionName": "radiusY",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 36,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 57
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "",
+                        "functionName": "strokeColor",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "capStyle",
+                        "line": 61
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 17,
+                        "errorMessage": "Cannot access value for name width",
+                        "functionName": "startX",
                         "line": 64
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 30,
-                        "errorMessage": "Cannot access value for name width",
-                        "functionName": "centerX",
-                        "line": 66
+                        "column": 21,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name height",
+                        "functionName": "startY",
+                        "line": 65
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name height",
-                        "functionName": "centerY",
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name width",
+                        "functionName": "centerX",
                         "line": 67
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name width",
-                        "functionName": "radiusX",
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Cannot access value for name height",
+                        "functionName": "centerY",
                         "line": 68
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name width",
+                        "functionName": "radiusX",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name height",
                         "functionName": "radiusY",
-                        "line": 69
+                        "line": 70
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 272,
+                        "durationMicroseconds": 265,
                         "errorMessage": "",
                         "functionName": "sweepAngle",
-                        "line": 71
+                        "line": 72
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 81
+                        "line": 82
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 48,
                         "errorMessage": "",
                         "functionName": "text",
-                        "line": 85
+                        "line": 86
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 47,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 88
+                        "line": 89
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 243,
+                        "durationMicroseconds": 217,
                         "errorMessage": "",
                         "functionName": "text",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 20,
-                        "errorMessage": "Cannot load property colorTextLight from const QMetaObject.",
-                        "functionName": "color",
                         "line": 93
                     },
                     {
@@ -225,39 +209,39 @@
                         "durationMicroseconds": 46,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 96
+                        "line": 97
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 521,
+                        "durationMicroseconds": 278,
                         "errorMessage": "",
                         "functionName": "text",
-                        "line": 100
+                        "line": 101
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "color",
-                        "line": 102
+                        "line": 103
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 104
+                        "line": 105
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 55,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 112
+                        "line": 113
                     }
                 ],
                 "filePath": "C:/project/qt/logintest/qml/GaugeView.qml"

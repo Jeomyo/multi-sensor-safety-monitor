@@ -73,7 +73,6 @@ CMakeFiles/module_applogintest_aotstats_target: .rcc/qmlcache/module_applogintes
 .rcc/qmlcache/module_applogintest.aotstats: .rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.aotstats
 .rcc/qmlcache/module_applogintest.aotstats: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats
 .rcc/qmlcache/module_applogintest.aotstats: .rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.aotstats
-.rcc/qmlcache/module_applogintest.aotstats: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats
 .rcc/qmlcache/module_applogintest.aotstats: .rcc/qmlcache/module_applogintest.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_applogintest.aotstats"
 	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlaotstats.exe aggregate C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/module_applogintest.aotstatslist C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/module_applogintest.aotstats
@@ -162,20 +161,6 @@ CMakeFiles/module_applogintest_aotstats_target: .rcc/qmlcache/module_applogintes
 .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\applogintest_qml\NavigationButton_qml.cpp.aotstats
 
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: C:/project/qt/logintest/qml/Theme.qml
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/qmake_logintest.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/applogintest_raw_qml_0.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: logintest/applogintest.qmltypes
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: logintest/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating .rcc/qmlcache/applogintest_qml/Theme_qml.cpp, .rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /logintest/qml/Theme.qml -I C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logintest/qmldir --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_logintest.qrc --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0.qrc --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=logintest(applogintest) -o C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp C:/project/qt/logintest/qml/Theme.qml
-
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\applogintest_qml\Theme_qml.cpp.aotstats
-
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.aotstats
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp
@@ -188,8 +173,6 @@ module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/Main_qml.cpp
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/Main_qml.cpp.aotstats
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp
 module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats
-module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp
-module_applogintest_aotstats_target: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats
 module_applogintest_aotstats_target: .rcc/qmlcache/module_applogintest.aotstats
 module_applogintest_aotstats_target: CMakeFiles/module_applogintest_aotstats_target
 module_applogintest_aotstats_target: CMakeFiles/module_applogintest_aotstats_target.dir/build.make

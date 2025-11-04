@@ -18,7 +18,6 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.aotstats" "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp"
   "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.aotstats" "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp"
   "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats" "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp"
-  "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats" "C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp"
   )
 
 

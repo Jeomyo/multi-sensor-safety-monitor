@@ -6,7 +6,6 @@
     <file alias="qml/DashboardPage.qml">C:/project/qt/logintest/qml/DashboardPage.qml</file>
     <file alias="qml/NavigationButton.qml">C:/project/qt/logintest/qml/NavigationButton.qml</file>
     <file alias="qml/GaugeView.qml">C:/project/qt/logintest/qml/GaugeView.qml</file>
-    <file alias="qml/Theme.qml">C:/project/qt/logintest/qml/Theme.qml</file>
   </qresource>
 </RCC>
 

@@ -192,58 +192,43 @@ logintest/applogintest.qmltypes: applogintest_qmltyperegistrations.cpp
 .rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.aotstats: .rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp.aotstats
 
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: C:/project/qt/logintest/qml/Theme.qml
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/qmake_logintest.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/applogintest_raw_qml_0.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: .qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: logintest/applogintest.qmltypes
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp: logintest/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating .rcc/qmlcache/applogintest_qml/Theme_qml.cpp, .rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /logintest/qml/Theme.qml -I C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logintest/qmldir --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_logintest.qrc --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0.qrc --resource C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=logintest(applogintest) -o C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp C:/project/qt/logintest/qml/Theme.qml
-
-.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\applogintest_qml\Theme_qml.cpp.aotstats
-
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/AppWindow.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/LoginPage.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/Main.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/DashboardPage.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/NavigationButton.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/GaugeView.qml
-.qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/project/qt/logintest/qml/Theme.qml
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: .qt/rcc/applogintest_raw_qml_0.qrc
 .qt/rcc/qrc_applogintest_raw_qml_0.cpp: C:/Qt/6.9.2/mingw_64/bin/rcc.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Running rcc for resource applogintest_raw_qml_0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Running rcc for resource applogintest_raw_qml_0"
 	C:\Qt\6.9.2\mingw_64\bin\rcc.exe --output C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp --name applogintest_raw_qml_0 C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0.qrc --no-zstd
 
 .qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp: logintest/qml/qmldir
 .qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp: .qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc
 .qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp: C:/Qt/6.9.2/mingw_64/bin/rcc.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Running rcc for resource applogintest_raw_qml_0_extra_qmldirs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Running rcc for resource applogintest_raw_qml_0_extra_qmldirs"
 	C:\Qt\6.9.2\mingw_64\bin\rcc.exe --output C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp --name applogintest_raw_qml_0_extra_qmldirs C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/applogintest_raw_qml_0_extra_qmldirs.qrc --no-zstd
 
 applogintest_autogen/timestamp: C:/Qt/6.9.2/mingw_64/bin/moc.exe
 applogintest_autogen/timestamp: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Automatic MOC and UIC for target applogintest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Automatic MOC and UIC for target applogintest"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/applogintest_autogen.dir/AutogenInfo.json Debug
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/applogintest_autogen/timestamp
 
 meta_types/applogintest_json_file_list.txt: C:/Qt/6.9.2/mingw_64/bin/cmake_automoc_parser.exe
 meta_types/applogintest_json_file_list.txt: applogintest_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Running AUTOMOC file extraction for target applogintest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Running AUTOMOC file extraction for target applogintest"
 	C:\Qt\6.9.2\mingw_64\bin\cmake_automoc_parser.exe --cmake-autogen-cache-file C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/applogintest_autogen.dir/ParseCache.txt --cmake-autogen-info-file C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/applogintest_autogen.dir/AutogenInfo.json --output-file-path C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/meta_types/applogintest_json_file_list.txt --timestamp-file-path C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/meta_types/applogintest_json_file_list.txt.timestamp --cmake-autogen-include-dir-path C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/applogintest_autogen/include
 
 meta_types/qt6applogintest_debug_metatypes.json: meta_types/qt6applogintest_debug_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating meta_types/qt6applogintest_debug_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating meta_types/qt6applogintest_debug_metatypes.json"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E true
 
 CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj: CMakeFiles/applogintest.dir/flags.make
 CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj: applogintest_autogen/mocs_compilation.cpp
 CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\applogintest.dir\applogintest_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\applogintest.dir\applogintest_autogen\mocs_compilation.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\applogintest_autogen\mocs_compilation.cpp
 
 CMakeFiles/applogintest.dir/applogintest_autogen/mocs_compilation.cpp.i: cmake_force
@@ -258,7 +243,7 @@ CMakeFiles/applogintest.dir/main.cpp.obj: CMakeFiles/applogintest.dir/flags.make
 CMakeFiles/applogintest.dir/main.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/main.cpp.obj: C:/project/qt/logintest/main.cpp
 CMakeFiles/applogintest.dir/main.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/applogintest.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/applogintest.dir/main.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/main.cpp.obj -MF CMakeFiles\applogintest.dir\main.cpp.obj.d -o CMakeFiles\applogintest.dir\main.cpp.obj -c C:\project\qt\logintest\main.cpp
 
 CMakeFiles/applogintest.dir/main.cpp.i: cmake_force
@@ -273,7 +258,7 @@ CMakeFiles/applogintest.dir/backend.cpp.obj: CMakeFiles/applogintest.dir/flags.m
 CMakeFiles/applogintest.dir/backend.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/backend.cpp.obj: C:/project/qt/logintest/backend.cpp
 CMakeFiles/applogintest.dir/backend.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/applogintest.dir/backend.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/applogintest.dir/backend.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/backend.cpp.obj -MF CMakeFiles\applogintest.dir\backend.cpp.obj.d -o CMakeFiles\applogintest.dir\backend.cpp.obj -c C:\project\qt\logintest\backend.cpp
 
 CMakeFiles/applogintest.dir/backend.cpp.i: cmake_force
@@ -288,7 +273,7 @@ CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj: CMakeFile
 CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj: applogintest_qmltyperegistrations.cpp
 CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -MD -MT CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.obj -MF CMakeFiles\applogintest.dir\applogintest_qmltyperegistrations.cpp.obj.d -o CMakeFiles\applogintest.dir\applogintest_qmltyperegistrations.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\applogintest_qmltyperegistrations.cpp
 
 CMakeFiles/applogintest.dir/applogintest_qmltyperegistrations.cpp.i: cmake_force
@@ -303,7 +288,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qr
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj: .qt/rcc/qrc_qmake_logintest.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_logintest.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_logintest.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_logintest.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_logintest.cpp.i: cmake_force
@@ -318,7 +303,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj: .rcc/qmlcache/applogintest_qmlcache_loader.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qmlcache_loader.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qmlcache_loader.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qmlcache_loader.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qmlcache_loader.cpp.i: cmake_force
@@ -333,7 +318,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\AppWindow_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\AppWindow_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\AppWindow_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/AppWindow_qml.cpp.i: cmake_force
@@ -348,7 +333,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\LoginPage_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\LoginPage_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\LoginPage_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/LoginPage_qml.cpp.i: cmake_force
@@ -363,7 +348,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/Main_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Main_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Main_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Main_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Main_qml.cpp.i: cmake_force
@@ -378,7 +363,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\DashboardPage_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\DashboardPage_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\DashboardPage_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.i: cmake_force
@@ -393,7 +378,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\NavigationButton_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\NavigationButton_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\NavigationButton_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.i: cmake_force
@@ -408,7 +393,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.i: cmake_force
@@ -419,26 +404,11 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlca
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\GaugeView_qml.cpp.s
 
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj: CMakeFiles/applogintest.dir/flags.make
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp
-
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp > CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp.i
-
-CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\applogintest_qml\Theme_qml.cpp.s
-
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj: CMakeFiles/applogintest.dir/flags.make
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj: .qt/rcc/qrc_applogintest_raw_qml_0.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.i: cmake_force
@@ -453,7 +423,7 @@ CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qr
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/applogintest.dir/includes_CXX.rsp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj: .qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/applogintest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj -MF CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj.d -o CMakeFiles\applogintest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj -c C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_applogintest_raw_qml_0_extra_qmldirs.cpp
 
 CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
@@ -478,7 +448,6 @@ applogintest_OBJECTS = \
 "CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj" \
 "CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj" \
 "CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj" \
-"CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj" \
 "CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj" \
 "CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj"
 
@@ -497,7 +466,6 @@ applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bi
 applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/DashboardPage_qml.cpp.obj
 applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.obj
 applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/GaugeView_qml.cpp.obj
-applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/applogintest_qml/Theme_qml.cpp.obj
 applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0.cpp.obj
 applogintest.exe: CMakeFiles/applogintest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_applogintest_raw_qml_0_extra_qmldirs.cpp.obj
 applogintest.exe: CMakeFiles/applogintest.dir/build.make
@@ -514,7 +482,7 @@ applogintest.exe: C:/Qt/6.9.2/mingw_64/lib/libQt6EntryPoint.a
 applogintest.exe: CMakeFiles/applogintest.dir/linkLibs.rsp
 applogintest.exe: CMakeFiles/applogintest.dir/objects1.rsp
 applogintest.exe: CMakeFiles/applogintest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable applogintest.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable applogintest.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\applogintest.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -540,8 +508,6 @@ CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/Main_qml.cpp
 CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/Main_qml.cpp.aotstats
 CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp
 CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/NavigationButton_qml.cpp.aotstats
-CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp
-CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qml/Theme_qml.cpp.aotstats
 CMakeFiles/applogintest.dir/depend: .rcc/qmlcache/applogintest_qmlcache_loader.cpp
 CMakeFiles/applogintest.dir/depend: applogintest_autogen/timestamp
 CMakeFiles/applogintest.dir/depend: applogintest_qmltyperegistrations.cpp

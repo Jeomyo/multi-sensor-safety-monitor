@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import logintest 1.0
 
 ApplicationWindow {
     id: root
@@ -19,8 +20,8 @@ ApplicationWindow {
     Connections {
         target: backend
         function onLoginSuccess() {
-            console.log("✅ 로그인 성공 → DashboardPage.qml로 이동")
-            stack.push("DashboardPage.qml")
+            console.log("✅ 로그인 성공")
+            stack.push("Main.qml")
         }
 
         function onLoginFailed() {

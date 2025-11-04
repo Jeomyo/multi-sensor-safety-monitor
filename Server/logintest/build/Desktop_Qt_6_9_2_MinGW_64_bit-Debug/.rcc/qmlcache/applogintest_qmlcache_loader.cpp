@@ -47,13 +47,6 @@ namespace _logintest_qml_GaugeView_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _logintest_qml_Theme_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 
 }
 namespace {
@@ -74,7 +67,6 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/logintest/qml/DashboardPage.qml"), &QmlCacheGeneratedCode::_logintest_qml_DashboardPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/logintest/qml/NavigationButton.qml"), &QmlCacheGeneratedCode::_logintest_qml_NavigationButton_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/logintest/qml/GaugeView.qml"), &QmlCacheGeneratedCode::_logintest_qml_GaugeView_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/logintest/qml/Theme.qml"), &QmlCacheGeneratedCode::_logintest_qml_Theme_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

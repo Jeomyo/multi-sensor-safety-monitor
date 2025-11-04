@@ -77,7 +77,6 @@ CMakeFiles/applogintest_qmlimportscan: .qt/qml_imports/applogintest_build.cmake
 .qt/qml_imports/applogintest_build.cmake: C:/project/qt/logintest/qml/DashboardPage.qml
 .qt/qml_imports/applogintest_build.cmake: C:/project/qt/logintest/qml/NavigationButton.qml
 .qt/qml_imports/applogintest_build.cmake: C:/project/qt/logintest/qml/GaugeView.qml
-.qt/qml_imports/applogintest_build.cmake: C:/project/qt/logintest/qml/Theme.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for applogintest"
 	cd /d C:\project\qt\logintest && call C:\project\qt\logintest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlimportscanner.exe @C:/project/qt/logintest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/applogintest_build.rsp
 
