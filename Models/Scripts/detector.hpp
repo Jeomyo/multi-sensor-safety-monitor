@@ -31,7 +31,7 @@ public :
         _processName = "proc_"+_name;
         _inferName = "infer_"+_name;
 
-        _inputSize = dxapp::common::Size((int)_params._input_shape[1],(int)_params._input_shape[1]);
+        _inputSize = _params._input_size;
 
         _vStream = VideoStream(_inputType, _videoPath, sourceInfo.numOfFrames, _inputSize, _inputFormat, _dstSize, _inferenceEngine);        
         _srcSize = _vStream._srcSize;
@@ -44,10 +44,10 @@ public :
         outputsMemory = (uint8_t*)operator new(_inferenceEngine->output_size());
     };
 
-    void runPostProcess(uint8_t* output_data, int64_t data_length)
+    void runPostProcess(dxrt::TensorPtrs outputs)
     {
         std::unique_lock<std::mutex> _uniqueLock(_lock);
-        _postProcessing.run(output_data, data_length);
+        _postProcessing.run(outputs);
         _processed_count += 1;
         _fps_time_e = std::chrono::high_resolution_clock::now();
         _processTime = std::chrono::duration_cast<std::chrono::microseconds>(_fps_time_e - _fps_time_s).count();
@@ -63,7 +63,7 @@ public :
     {
         std::lock_guard<std::mutex> lk(_det_mtx);
         return _lastDetections; // 사본 반환
-    }
+    };
 
     dxapp::common::Point Position()
     {
@@ -299,7 +299,7 @@ public:
 
         params._classes = config.classes;
         params._numOfClasses = config.numOfClasses;
-        params._input_shape = inputShape;
+        params._input_size = dxapp::common::Size((int)inputShape[3], (int)inputShape[2]);
         params._outputShape = outputShape;
 
         size_t all_image_count = 0;
@@ -311,22 +311,6 @@ public:
         if(all_image_count == config.sourcesInfo.size())
             is_all_image = true;
 
-        dxrt::DataType outputTensorType = inferenceEngine->outputs().front().type();
-        switch (outputTensorType)
-        {
-        case dxrt::DataType::BBOX:
-            params._ppu_format = dxapp::yolo::PPUFormat::BBOX;
-            break;
-        case dxrt::DataType::FACE:
-            params._ppu_format = dxapp::yolo::PPUFormat::FACE;
-            break;
-        case dxrt::DataType::POSE:
-            params._ppu_format = dxapp::yolo::PPUFormat::POSE;
-            break;
-        default:
-            params._ppu_format = dxapp::yolo::PPUFormat::NONEPPU;
-            break;
-        }
 
         int div = dxapp::common::divideBoard(config.sourcesInfo.size());
 
@@ -337,14 +321,11 @@ public:
             apps.emplace_back(std::make_shared<DetectorApp>(inferenceEngine, config.sourcesInfo[i], config.inputFormat, config.appType, 
                                     params, i, dstPosition, dstSize));
         }
-        std::function<int(std::vector<std::shared_ptr<dxrt::Tensor>>, void*)> postProcCallBack = \
+        std::function<int(std::vector<std::shared_ptr<dxrt::Tensor>>, void*)> postProcCallBack =
         [&](std::vector<std::shared_ptr<dxrt::Tensor>> outputs, void* arg)
         {
-            DetectorApp* app = (DetectorApp*)arg;
-            int64_t dataLength = outputs.front()->shape().front();
-            if(dxapp::common::compareVersions(DXRT_VERSION, "2.6.3"))
-                dataLength = outputs.front()->shape()[1];
-            app->runPostProcess(app->get_outputMem(), dataLength);
+            auto* app = static_cast<DetectorApp*>(arg);
+            app->runPostProcess(outputs);
             return 0;
         };
         inferenceEngine->RegisterCallBack(postProcCallBack);
