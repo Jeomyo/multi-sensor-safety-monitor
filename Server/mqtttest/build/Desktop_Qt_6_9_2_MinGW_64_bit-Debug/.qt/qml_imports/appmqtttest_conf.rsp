@@ -1,0 +1,15 @@
+-rootPath
+C:/project/qt/mqtttest
+-cmake-output
+-output-file
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appmqtttest_conf.cmake
+-importPath
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/mqtttest
+-importPath
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.9.2/mingw_64/qml
+-qrcFiles
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_mqtttest.qrc
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appmqtttest_raw_qml_0.qrc
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appmqtttest_raw_qml_0_extra_qmldirs.qrc

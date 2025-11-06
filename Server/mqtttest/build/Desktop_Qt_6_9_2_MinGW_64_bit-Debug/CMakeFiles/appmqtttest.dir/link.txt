@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\appmqtttest.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\appmqtttest.dir/objects.a @CMakeFiles\appmqtttest.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -DQT_QML_DEBUG -g -mwindows -Wl,--whole-archive CMakeFiles\appmqtttest.dir/objects.a -Wl,--no-whole-archive -o appmqtttest.exe -Wl,--out-implib,libappmqtttest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\appmqtttest.dir\linkLibs.rsp

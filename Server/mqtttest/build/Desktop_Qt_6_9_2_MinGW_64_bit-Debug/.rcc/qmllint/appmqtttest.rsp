@@ -1,0 +1,17 @@
+--bare
+-I
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug
+-I
+C:/Qt/6.9.2/mingw_64/qml
+--resource
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_mqtttest.qrc
+--resource
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appmqtttest_raw_qml_0.qrc
+--resource
+C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appmqtttest_raw_qml_0_extra_qmldirs.qrc
+C:/project/qt/mqtttest/qml/AppWindow.qml
+C:/project/qt/mqtttest/qml/LoginPage.qml
+C:/project/qt/mqtttest/qml/Main.qml
+C:/project/qt/mqtttest/qml/DashboardPage.qml
+C:/project/qt/mqtttest/qml/NavigationButton.qml
+C:/project/qt/mqtttest/qml/GaugeView.qml

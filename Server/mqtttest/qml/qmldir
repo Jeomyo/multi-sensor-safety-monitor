@@ -1,0 +1,4 @@
+singleton Theme 1.0 Theme.qml
+NavigationButton 1.0 NavigationButton.qml
+GaugeView 1.0 GaugeView.qml
+DashboardPage 1.0 DashboardPage.qml
