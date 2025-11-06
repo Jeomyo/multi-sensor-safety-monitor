@@ -306,8 +306,8 @@ private:
     {
         if (prevSock.sock < 0) return;
 
-        const int kPreviewHz = 5;
-        const int kJpegQuality = 75;
+        const int kPreviewHz = 10;
+        const int kJpegQuality = 60;
 
         auto now = std::chrono::steady_clock::now();
         auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(now - lastPreviewSend).count();
