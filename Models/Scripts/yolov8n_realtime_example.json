@@ -28,7 +28,7 @@
  "sources":[
  {
   "type": "video",
-  "path": "rtsp://admin:qw12qw12%21@192.168.0.64:554/stream1 protocols=udp latency=20 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! appsink drop=1 max-buffers=1 sync=false"
+  "path": "rtsp://admin:qw12qw12%21@192.168.0.64:554/Streaming/Channels/102
  }
  ]
  },
