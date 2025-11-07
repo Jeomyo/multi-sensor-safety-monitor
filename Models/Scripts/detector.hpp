@@ -23,23 +23,28 @@
 #include <utils/videostream.hpp>
 #include <app_parser.hpp>
 
+// ===== ByteTrack 추가 =====
+#include <ByteTrack/BYTETracker.h>
+
 // ---------- UDS header & utils ----------
 #pragma pack(push,1)
 struct DxHdr {
   uint32_t magic;      // 0xABCD1204
-  uint16_t version;    // 1
+  uint16_t version;    // 2 (V2: track_id 포함)
   uint16_t flags;      // 0
   uint64_t seq_id;
   int64_t  stamp_nsec; // epoch ns (system_clock)
   uint32_t img_w, img_h;
-  uint32_t count;      // detections: N, preview: 0
+  uint32_t count;      // objects
   uint32_t reserved;   // 0
 };
 
-struct DxDet {
-  float x, y, w, h;    // 좌상단(x,y)+w,h (dstSize 픽셀 기준)
-  float score;
-  uint32_t label;
+// V2: 추적 ID 포함
+struct DxObjV2 {
+  float    x, y, w, h;   // 좌상단 + w,h (dstSize 픽셀 기준)
+  float    score;        // track score (또는 det score)
+  uint32_t label;        // class id (없으면 0xFFFFFFFF)
+  uint32_t track_id;     // 추적 ID (없으면 0xFFFFFFFF)
 };
 #pragma pack(pop)
 
@@ -84,27 +89,27 @@ public :
 
         _inputSize = _params._input_size;
 
-        _vStream = VideoStream(_inputType, _videoPath, sourceInfo.numOfFrames, _inputSize, _inputFormat, _dstSize, _inferenceEngine);        
+        _vStream = VideoStream(_inputType, _videoPath, sourceInfo.numOfFrames, _inputSize, _inputFormat, _dstSize, _inferenceEngine);
         _srcSize = _vStream._srcSize;
         _postProcessing = dxapp::yolo::PostProcessing(_params, _inputSize, _srcSize, _dstSize);
-        _resultFrame = cv::Mat(_dstSize._height, _dstSize._width, CV_8UC3, cv::Scalar(0, 0, 0));     
+        _resultFrame = cv::Mat(_dstSize._height, _dstSize._width, CV_8UC3, cv::Scalar(0, 0, 0));
         _frame_count = 0;
         _processed_count = 0;
         _fps_time_s = std::chrono::high_resolution_clock::now();
         _fps_time_e = std::chrono::high_resolution_clock::now();
-        
+
         _outputBufferSize = _inferenceEngine->GetOutputSize();
         _bufferPoolSize = 5;
         _currentBufferIndex = 0;
         for (int i = 0; i < _bufferPoolSize; ++i) {
             _bufferPool.push_back(std::vector<uint8_t>(_outputBufferSize));
         }
-        detSock.open_sender("/tmp/dx_det.sock");
-        prevSock.open_sender("/tmp/dx_det_preview.sock");
+        detSock.open_sender("/tmp/dx_det.sock");            // 단일 V2 전송
+        prevSock.open_sender("/tmp/dx_det_preview.sock");   // 프리뷰 전송
         lastPreviewSend = std::chrono::steady_clock::now();
 
     };
-    
+
     void runPostProcess(dxrt::TensorPtrs outputs)
     {
         std::unique_lock<std::mutex> _uniqueLock(_lock);
@@ -112,7 +117,7 @@ public :
         _processed_count += 1;
         _fps_time_e = std::chrono::high_resolution_clock::now();
         _processTime = std::chrono::duration_cast<std::chrono::microseconds>(_fps_time_e - _fps_time_s).count();
-        
+
         _currentOutputBuffer = nullptr;
     };
 
@@ -175,14 +180,14 @@ public :
         cv::Mat outputImg = cv::Mat(_dstSize._height, _dstSize._width, CV_8UC3, cv::Scalar(0, 0, 0));
 
         while(!_quit.load())
-        {    
+        {
             std::vector<uint8_t>* outputBuffer = nullptr;
             {
                 std::unique_lock<std::mutex> poolLock(_bufferPoolMutex);
                 outputBuffer = &_bufferPool[_currentBufferIndex];
                 _currentBufferIndex = (_currentBufferIndex + 1) % _bufferPoolSize; // Circular access
             }
-            
+
             if(!_quit.load())
             {
                 inf_data = _vStream.GetInputStream();
@@ -201,7 +206,7 @@ public :
                 }
                 _fps_time_s = std::chrono::high_resolution_clock::now();
                 _profiler.Start(_inferName);
-                
+
                 _currentOutputBuffer = outputBuffer;
                 std::ignore = _inferenceEngine->RunAsync(inf_data, (void*)this, (void*)outputBuffer->data());
                 _frame_count += 1;
@@ -211,18 +216,67 @@ public :
                 std::unique_lock<std::mutex> _uniqueLock(_lock);
                 dxapp::common::DetectObject results = _postProcessing.getResult();
 
-                sendDetectionsUDS(results, _frame_count, _dstSize._width, _dstSize._height);
+                // ---- (1) Detection → ByteTrack 입력 변환
+                std::vector<byte_track::Object> bt_in;
+                bt_in.reserve(results._detections.size());
+                for (const auto& d : results._detections) {
+                    byte_track::Rect<float> rr(d._bbox._xmin, d._bbox._ymin,
+                                               d._bbox._width, d._bbox._height);
+                    int   cls = static_cast<int>(d._classId);
+                    float sc  = d._conf;
+                    bt_in.emplace_back(rr, cls, sc);
+                }
 
+                // ---- (2) ByteTrack 업데이트
+                auto tracks = _tracker.update(bt_in);
+
+                // ---- (3) 단일 UDS(V2) 전송: track_id 포함
+                sendObjectsUDS_V2(tracks, results, _frame_count, _dstSize._width, _dstSize._height);
+
+                // ---- (4) 프리뷰 이미지: 디텍션 박스 + Track ID 텍스트 오버레이
                 outputImg = _vStream.GetOutputStream(results);
 
+                // Track ID 그리기 (tlwh 기준)
+                for (const auto& t : tracks) {
+                    if (!t->isActivated()) continue;
+                    const auto& r = t->getRect();
+                    int x = static_cast<int>(r.x());
+                    int y = static_cast<int>(r.y());
+                    int w = static_cast<int>(r.width());
+                    int h = static_cast<int>(r.height());
+                    int tid = static_cast<int>(t->getTrackId());
+
+                    // 박스 라인(초록)
+                    cv::rectangle(outputImg, cv::Rect(x,y,w,h), cv::Scalar(0,255,0), 2);
+
+                    // 라벨 텍스트: "#<track_id>"
+                    std::string tag = "#" + std::to_string(tid);
+                    int base = 0;
+                    const int font = cv::FONT_HERSHEY_SIMPLEX;
+                    const double scale = 0.6;
+                    const int thickness = 2;
+                    cv::Size ts = cv::getTextSize(tag, font, scale, thickness, &base);
+
+                    // 텍스트 배경(반투명 검정 박스)
+                    int tx = std::max(0, x);
+                    int ty = std::max(0, y - ts.height - 4);
+                    cv::rectangle(outputImg,
+                                  cv::Rect(tx, std::max(0, ty), ts.width + 8, ts.height + 6),
+                                  cv::Scalar(0,0,0), cv::FILLED);
+                    // 텍스트(초록)
+                    cv::putText(outputImg, tag, cv::Point(tx + 4, ty + ts.height + 1),
+                                font, scale, cv::Scalar(0,255,0), thickness, cv::LINE_AA);
+                }
+
+                // ---- (5) 프리뷰 JPEG 전송 (Throttle)
                 sendPreviewJPEG_Throttled(outputImg, _frame_count, _dstSize._width, _dstSize._height);
 
                 int64_t new_average = ((_fps_previous_average_time * _processed_count) + _processTime) / (_processed_count + 1);
                 int64_t fps = 1000000 / new_average;
                 _fps_previous_average_time = new_average;
                 std::string fpsCaption = "FPS : " + std::to_string((int)fps);
-                // cv::Size fpsCaptionSize = cv::getTextSize(fpsCaption, cv::FONT_HERSHEY_PLAIN, 3, 2, nullptr);
-                // cv::putText(outputImg, fpsCaption, cv::Point(outputImg.size().width - fpsCaptionSize.width, outputImg.size().height - fpsCaptionSize.height), cv::FONT_HERSHEY_PLAIN, 3, cv::Scalar(255, 255, 255),2);
+                (void)fpsCaption; // 필요시 영상에 찍어 사용
+
                 if(_appType == NONE)
                     std::cout << results <<std::endl;
                 {
@@ -267,41 +321,80 @@ public :
     };
 
 private:
-    // ---- Detections UDS 전송 ----
-    void sendDetectionsUDS(const dxapp::common::DetectObject& results,
-                        uint64_t seq_id, int img_w, int img_h)
+    // ---- Objects(V2: track 포함) UDS 전송 ----
+    void sendObjectsUDS_V2(const std::vector<byte_track::BYTETracker::STrackPtr>& tracks,
+                           const dxapp::common::DetectObject& dets_for_label_fallback,
+                           uint64_t seq_id, int img_w, int img_h)
     {
         if (detSock.sock < 0) return;
-        const auto& dets = results._detections; // vector<Object>
+
         DxHdr H{};
         H.magic = 0xABCD1204;
-        H.version = 1;
+        H.version = 2;
         H.flags = 0;
         H.seq_id = seq_id;
         H.stamp_nsec = now_epoch_ns();
         H.img_w = static_cast<uint32_t>(img_w);
         H.img_h = static_cast<uint32_t>(img_h);
-        H.count = static_cast<uint32_t>(dets.size());
+        H.count = static_cast<uint32_t>(tracks.size());
         H.reserved = 0;
 
-        std::vector<uint8_t> buf(sizeof(DxHdr) + sizeof(DxDet) * dets.size());
+        std::vector<uint8_t> buf(sizeof(DxHdr) + sizeof(DxObjV2) * tracks.size());
         std::memcpy(buf.data(), &H, sizeof(DxHdr));
-        auto* D = reinterpret_cast<DxDet*>(buf.data() + sizeof(DxHdr));
+        auto* O = reinterpret_cast<DxObjV2*>(buf.data() + sizeof(DxHdr));
 
-        for (size_t i = 0; i < dets.size(); ++i)
+        // (옵션) det기반 라벨/점수 보강 — 필요 없으면 이 블록 통째로 제거 가능
+        const auto& dets = dets_for_label_fallback._detections;
+        auto iou = [](float ax, float ay, float aw, float ah,
+                      float bx, float by, float bw, float bh)->float {
+            float ax2=ax+aw, ay2=ay+ah, bx2=bx+bw, by2=by+bh;
+            float ix = std::max(ax, bx);
+            float iy = std::max(ay, by);
+            float ix2= std::min(ax2, bx2);
+            float iy2= std::min(ay2, by2);
+            float iw = std::max(0.0f, ix2-ix);
+            float ih = std::max(0.0f, iy2-iy);
+            float inter = iw*ih;
+            float areaA = aw*ah, areaB = bw*bh;
+            float uni = areaA + areaB - inter + 1e-6f;
+            return inter/uni;
+        };
+
+        for (size_t i = 0; i < tracks.size(); ++i)
         {
-            const auto& o = dets[i];
-            D[i].x = o._bbox._xmin;
-            D[i].y = o._bbox._ymin;
-            D[i].w = o._bbox._width;   // width 확정
-            D[i].h = o._bbox._height;  // height 확정
-            D[i].score = o._conf;
-            D[i].label = static_cast<uint32_t>(o._classId);
+            const auto& t = tracks[i];
+            const auto& r = t->getRect(); // tlwh
+
+            DxObjV2 v{};
+            v.x = r.x();
+            v.y = r.y();
+            v.w = r.width();
+            v.h = r.height();
+
+            v.score    = t->getScore(); // 기본 track score
+            v.label    = 0xFFFFFFFFu;   // 기본 비움
+            v.track_id = static_cast<uint32_t>(t->getTrackId());
+
+            float best_iou = 0.0f; int best_cls = -1; float best_conf = 0.0f;
+            for (const auto& d : dets)
+            {
+                float iouv = iou(v.x, v.y, v.w, v.h,
+                                 d._bbox._xmin, d._bbox._ymin, d._bbox._width, d._bbox._height);
+                if (iouv > best_iou) { best_iou = iouv; best_cls = d._classId; best_conf = d._conf; }
+            }
+            if (best_iou >= 0.3f && best_cls >= 0)
+            {
+                v.label = static_cast<uint32_t>(best_cls);
+                // v.score = best_conf; // 라벨 신뢰도를 쓰고 싶으면 활성화
+            }
+
+            O[i] = v;
         }
+
         detSock.send(buf.data(), buf.size());
     }
 
-    // ---- Preview JPEG 전송 (Throttle 5Hz) ----
+    // ---- Preview JPEG 전송 (Throttle) ----
     void sendPreviewJPEG_Throttled(const cv::Mat& bgr, uint64_t seq_id, int img_w, int img_h)
     {
         if (prevSock.sock < 0) return;
@@ -320,7 +413,7 @@ private:
 
         DxHdr H{};
         H.magic = 0xABCD1204;
-        H.version = 1;
+        H.version = 2; // 프리뷰도 V2 헤더 재사용 (count=0)
         H.flags = 0;
         H.seq_id = seq_id;
         H.stamp_nsec = now_epoch_ns();
@@ -341,7 +434,7 @@ private:
 
     std::shared_ptr<dxrt::InferenceEngine> _inferenceEngine;
     dxrt::Profiler &_profiler;
-    
+
     std::string _videoPath;
     std::string _name;
     std::string _outName;
@@ -360,7 +453,7 @@ private:
     dxapp::common::Size _dstSize;
 
     cv::Mat _resultFrame;
-    
+
     dxapp::yolo::PostProcessing _postProcessing;
 
     std::string _processName;
@@ -368,7 +461,7 @@ private:
     uint64_t _inferTime = 0;
     int64_t _processTime = 0;
     int64_t _fps_previous_average_time = 0;
-    
+
     std::thread _thread;
     std::thread _ppThread;
     std::mutex _lock;
@@ -380,12 +473,12 @@ private:
     unsigned long long _processed_count = 0;
     unsigned long long _frame_count = 0;
     unsigned long long _result_frame_count = 0;
-    
+
     std::chrono::high_resolution_clock::time_point _fps_time_s;
     std::chrono::high_resolution_clock::time_point _fps_time_e;
-    
+
     bool _get_frame_result = true;
-    
+
     // Circular buffer pool for dynamic memory management
     std::vector<std::vector<uint8_t>> _bufferPool;
     std::mutex _bufferPoolMutex;
@@ -393,10 +486,15 @@ private:
     size_t _bufferPoolSize;
     size_t _currentBufferIndex; // Index for circular buffer access
     std::vector<uint8_t>* _currentOutputBuffer; // Pointer to current buffer
-    DxUds detSock;     // /tmp/dx_det.sock 로 Detection 전송
-    DxUds prevSock;    // /tmp/dx_det_preview.sock 로 JPEG 프리뷰 전송
+
+    // 단일 전송 소켓
+    DxUds detSock;     // /tmp/dx_det.sock : V2(Object+track_id)
+    DxUds prevSock;    // /tmp/dx_det_preview.sock : JPEG 프리뷰
     std::chrono::steady_clock::time_point lastPreviewSend;
 
+    // ===== ByteTrack 멤버 =====
+    // fps=30, track_buffer=30, track_thresh=0.10, high_thresh=0.25, match=0.80
+    byte_track::BYTETracker _tracker{30, 30, 0.10f, 0.25f, 0.80f};
 };
 
 class Detector
@@ -426,7 +524,7 @@ public:
             }
         }
         auto outputDataInfo = inferenceEngine->GetOutputs();
-        for(auto &info:outputDataInfo) 
+        for(auto &info:outputDataInfo)
         {
             outputShape.emplace_back(info.shape());
         }
@@ -466,7 +564,7 @@ public:
         {
             throw std::invalid_argument("[DXAPP] [ER] output tensor index list is not enough. Please check the model output configuration and the output tensor names.");
         }
-        
+
         size_t all_image_count = 0;
         for(auto const& source_info : config.sourcesInfo)
         {
@@ -482,7 +580,7 @@ public:
         {
             dxapp::common::Size dstSize = dxapp::common::Size(config.videoOutResolution._width/div, config.videoOutResolution._height/div);
             dxapp::common::Point dstPosition((config.videoOutResolution._width/div)*(i%div), (config.videoOutResolution._height/div)*(i/div));
-            apps.emplace_back(std::make_shared<DetectorApp>(inferenceEngine, config.sourcesInfo[i], config.inputFormat, config.appType, 
+            apps.emplace_back(std::make_shared<DetectorApp>(inferenceEngine, config.sourcesInfo[i], config.inputFormat, config.appType,
                                     params, i, dstPosition, dstSize));
         }
         std::function<int(dxrt::TensorPtrs, void*)> postProcCallBack = \
@@ -493,7 +591,7 @@ public:
             return 0;
         };
         inferenceEngine->RegisterCallback(postProcCallBack);
-        
+
         resultView = cv::Mat(config.videoOutResolution._height, config.videoOutResolution._width, CV_8UC3, cv::Scalar(0, 0, 0));
     };
 
@@ -515,13 +613,13 @@ public:
         {
             if(is_all_image)
             {
-                std::cout << "[result save mode] ./xxx.jpg \n" 
+                std::cout << "[result save mode] ./xxx.jpg \n"
                         << "Create Thread to save jpg " << std::endl;
                 saveThread = std::thread(&Detector::saveImage, this);
             }
             else
             {
-                std::cout << "[result save mode] ./result.avi \n" 
+                std::cout << "[result save mode] ./result.avi \n"
                         << "Create Thread to save avi " << std::endl;
                 saveThread = std::thread(&Detector::saveResult, this);
             }
@@ -588,7 +686,7 @@ public:
         std::cout << "Press 'q' key to quit " << std::endl;
         std::string saveFileName = "result.avi";
         cv::VideoWriter writer;
-        writer.open(saveFileName, cv::VideoWriter::fourcc('M', 'J', 'P','G'), 30,  
+        writer.open(saveFileName, cv::VideoWriter::fourcc('M', 'J', 'P','G'), 30,
                     cv::Size(config.videoOutResolution._width, config.videoOutResolution._height), true);
         if(!writer.isOpened())
         {
@@ -650,7 +748,7 @@ public:
         {
             params._final_outputs.push_back(output.GetString());
         }
-        
+
         std::string read = "";
         read = modelParam.HasMember("last_activation")?modelParam["last_activation"].GetString():"";
         if(read=="sigmoid")
@@ -659,7 +757,7 @@ public:
             params._last_activation = dxapp::yolo::exp;
         else
             params._last_activation = [](float x){return x;};
-        
+
         read = modelParam["decoding_method"].GetString();
         if(read=="yolox")
             params._decode_method = dxapp::yolo::Decode::YOLOX;
@@ -688,7 +786,7 @@ public:
             params._decode_method = dxapp::yolo::Decode::CUSTOM_DECODE;
         else
             params._decode_method = dxapp::yolo::Decode::YOLO_BASIC;
-        
+
         read = modelParam["box_format"].GetString();
         if(read=="corner")
             params._box_format = dxapp::yolo::BBoxFormat::XYX2Y2;
@@ -722,11 +820,11 @@ public:
             params._layers.emplace_back(l);
         }
     };
-    
+
     dxapp::AppConfig config;
     std::vector<std::vector<int64_t>> outputShape;
     bool is_all_image = false;
-    
+
     std::shared_ptr<dxrt::InferenceEngine> inferenceEngine;
     dxapp::yolo::Params params;
     std::string modelPath;
