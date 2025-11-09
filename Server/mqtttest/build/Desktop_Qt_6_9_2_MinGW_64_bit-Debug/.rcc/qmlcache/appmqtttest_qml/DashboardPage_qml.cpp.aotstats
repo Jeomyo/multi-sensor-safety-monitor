@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 286,
+                        "durationMicroseconds": 379,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name backend",
                         "functionName": "target",
                         "line": 13
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 33
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 34
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 46
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 47
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 60
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 61

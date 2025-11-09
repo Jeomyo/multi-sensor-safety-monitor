@@ -216,20 +216,29 @@ appmqtttest_autogen/timestamp: CMakeFiles/appmqtttest.dir/compiler_depend.ts
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appmqtttest_autogen.dir/AutogenInfo.json Debug
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appmqtttest_autogen/timestamp
 
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: C:/project/qt/mqtttest/images/resources.qrc
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: CMakeFiles/appmqtttest_autogen.dir/AutoRcc_resources_4UGIYD6VGQ_Info.json
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: C:/project/qt/mqtttest/images/helmet.png
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: C:/project/qt/mqtttest/images/map.png
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: C:/Qt/6.9.2/mingw_64/bin/rcc.exe
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp: C:/Qt/6.9.2/mingw_64/bin/rcc.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Automatic RCC for images/resources.qrc"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appmqtttest_autogen.dir/AutoRcc_resources_4UGIYD6VGQ_Info.json Debug
+
 meta_types/appmqtttest_json_file_list.txt: C:/Qt/6.9.2/mingw_64/bin/cmake_automoc_parser.exe
 meta_types/appmqtttest_json_file_list.txt: appmqtttest_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Running AUTOMOC file extraction for target appmqtttest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Running AUTOMOC file extraction for target appmqtttest"
 	C:\Qt\6.9.2\mingw_64\bin\cmake_automoc_parser.exe --cmake-autogen-cache-file C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appmqtttest_autogen.dir/ParseCache.txt --cmake-autogen-info-file C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appmqtttest_autogen.dir/AutogenInfo.json --output-file-path C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/meta_types/appmqtttest_json_file_list.txt --timestamp-file-path C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/meta_types/appmqtttest_json_file_list.txt.timestamp --cmake-autogen-include-dir-path C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appmqtttest_autogen/include
 
 meta_types/qt6appmqtttest_debug_metatypes.json: meta_types/qt6appmqtttest_debug_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating meta_types/qt6appmqtttest_debug_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating meta_types/qt6appmqtttest_debug_metatypes.json"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E true
 
 CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj: CMakeFiles/appmqtttest.dir/flags.make
 CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj: appmqtttest_autogen/mocs_compilation.cpp
 CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\appmqtttest.dir\appmqtttest_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\appmqtttest.dir\appmqtttest_autogen\mocs_compilation.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appmqtttest_autogen\mocs_compilation.cpp
 
 CMakeFiles/appmqtttest.dir/appmqtttest_autogen/mocs_compilation.cpp.i: cmake_force
@@ -244,7 +253,7 @@ CMakeFiles/appmqtttest.dir/main.cpp.obj: CMakeFiles/appmqtttest.dir/flags.make
 CMakeFiles/appmqtttest.dir/main.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/main.cpp.obj: C:/project/qt/mqtttest/main.cpp
 CMakeFiles/appmqtttest.dir/main.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/appmqtttest.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/appmqtttest.dir/main.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/main.cpp.obj -MF CMakeFiles\appmqtttest.dir\main.cpp.obj.d -o CMakeFiles\appmqtttest.dir\main.cpp.obj -c C:\project\qt\mqtttest\main.cpp
 
 CMakeFiles/appmqtttest.dir/main.cpp.i: cmake_force
@@ -259,7 +268,7 @@ CMakeFiles/appmqtttest.dir/backend.cpp.obj: CMakeFiles/appmqtttest.dir/flags.mak
 CMakeFiles/appmqtttest.dir/backend.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/backend.cpp.obj: C:/project/qt/mqtttest/backend.cpp
 CMakeFiles/appmqtttest.dir/backend.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/appmqtttest.dir/backend.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/appmqtttest.dir/backend.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/backend.cpp.obj -MF CMakeFiles\appmqtttest.dir\backend.cpp.obj.d -o CMakeFiles\appmqtttest.dir\backend.cpp.obj -c C:\project\qt\mqtttest\backend.cpp
 
 CMakeFiles/appmqtttest.dir/backend.cpp.i: cmake_force
@@ -274,7 +283,7 @@ CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj: CMakeFiles/
 CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj: appmqtttest_qmltyperegistrations.cpp
 CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -MD -MT CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.obj -MF CMakeFiles\appmqtttest.dir\appmqtttest_qmltyperegistrations.cpp.obj.d -o CMakeFiles\appmqtttest.dir\appmqtttest_qmltyperegistrations.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appmqtttest_qmltyperegistrations.cpp
 
 CMakeFiles/appmqtttest.dir/appmqtttest_qmltyperegistrations.cpp.i: cmake_force
@@ -289,7 +298,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj: .qt/rcc/qrc_qmake_mqtttest.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_mqtttest.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_mqtttest.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_qmake_mqtttest.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_mqtttest.cpp.i: cmake_force
@@ -304,7 +313,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj: .rcc/qmlcache/appmqtttest_qmlcache_loader.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qmlcache_loader.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qmlcache_loader.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qmlcache_loader.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qmlcache_loader.cpp.i: cmake_force
@@ -319,7 +328,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\AppWindow_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\AppWindow_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\AppWindow_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/AppWindow_qml.cpp.i: cmake_force
@@ -334,7 +343,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\LoginPage_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\LoginPage_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\LoginPage_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/LoginPage_qml.cpp.i: cmake_force
@@ -349,7 +358,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/Main_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\Main_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\Main_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\Main_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.i: cmake_force
@@ -364,7 +373,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\DashboardPage_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\DashboardPage_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\DashboardPage_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/DashboardPage_qml.cpp.i: cmake_force
@@ -379,7 +388,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\NavigationButton_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\NavigationButton_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\NavigationButton_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.i: cmake_force
@@ -394,7 +403,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcac
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj: .rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\GaugeView_qml.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\GaugeView_qml.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.rcc\qmlcache\appmqtttest_qml\GaugeView_qml.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.i: cmake_force
@@ -409,7 +418,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj: .qt/rcc/qrc_appmqtttest_raw_qml_0.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.i: cmake_force
@@ -424,7 +433,7 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj: .qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj -MF CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj.d -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp
 
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
@@ -434,6 +443,21 @@ CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc
 CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp -o CMakeFiles\appmqtttest.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.s
+
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj: CMakeFiles/appmqtttest.dir/flags.make
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj: CMakeFiles/appmqtttest.dir/includes_CXX.rsp
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj: appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj: CMakeFiles/appmqtttest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj -MF CMakeFiles\appmqtttest.dir\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp.obj.d -o CMakeFiles\appmqtttest.dir\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp.obj -c C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp
+
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp > CMakeFiles\appmqtttest.dir\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp.i
+
+CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp -o CMakeFiles\appmqtttest.dir\appmqtttest_autogen\4UGIYD6VGQ\qrc_resources.cpp.s
 
 # Object files for target appmqtttest
 appmqtttest_OBJECTS = \
@@ -450,7 +474,8 @@ appmqtttest_OBJECTS = \
 "CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.obj" \
 "CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj" \
 "CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj" \
-"CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj"
+"CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj" \
+"CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj"
 
 # External object files for target appmqtttest
 appmqtttest_EXTERNAL_OBJECTS =
@@ -469,6 +494,7 @@ appmqtttest.exe: CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appmqtttest_qml/GaugeView_qml.cpp.obj
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0.cpp.obj
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appmqtttest_raw_qml_0_extra_qmldirs.cpp.obj
+appmqtttest.exe: CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/build.make
 appmqtttest.exe: C:/Qt/6.9.2/mingw_64/lib/libQt6Quick.a
 appmqtttest.exe: C:/Qt/6.9.2/mingw_64/lib/libQt6Mqtt.a
@@ -484,7 +510,7 @@ appmqtttest.exe: C:/Qt/6.9.2/mingw_64/lib/libQt6EntryPoint.a
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/linkLibs.rsp
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/objects1.rsp
 appmqtttest.exe: CMakeFiles/appmqtttest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable appmqtttest.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\project\qt\mqtttest\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable appmqtttest.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\appmqtttest.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -511,6 +537,7 @@ CMakeFiles/appmqtttest.dir/depend: .rcc/qmlcache/appmqtttest_qml/Main_qml.cpp.ao
 CMakeFiles/appmqtttest.dir/depend: .rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp
 CMakeFiles/appmqtttest.dir/depend: .rcc/qmlcache/appmqtttest_qml/NavigationButton_qml.cpp.aotstats
 CMakeFiles/appmqtttest.dir/depend: .rcc/qmlcache/appmqtttest_qmlcache_loader.cpp
+CMakeFiles/appmqtttest.dir/depend: appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp
 CMakeFiles/appmqtttest.dir/depend: appmqtttest_autogen/timestamp
 CMakeFiles/appmqtttest.dir/depend: appmqtttest_qmltyperegistrations.cpp
 CMakeFiles/appmqtttest.dir/depend: meta_types/appmqtttest_json_file_list.txt

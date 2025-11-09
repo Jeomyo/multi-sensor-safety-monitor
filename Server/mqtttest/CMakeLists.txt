@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(mqtttest VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTORCC ON) # 자동으로 사진 찾아서 등록
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick Mqtt)
 qt_standard_project_setup(REQUIRES 6.8)
@@ -12,8 +12,7 @@ qt_add_executable(appmqtttest
     main.cpp
     backend.cpp
     backend.h
-    #mqttmanager.cpp
-    #mqttmanager.h
+    images/resources.qrc
 )
 
 # ✅ QML 모듈
@@ -30,6 +29,11 @@ qt_add_qml_module(appmqtttest
         qml/GaugeView.qml
 
 )
+
+#qt_add_resources(appmqtttest "resources"
+#    FILES
+#        images/resources.qrc
+#)
 
 target_link_libraries(appmqtttest
     PRIVATE

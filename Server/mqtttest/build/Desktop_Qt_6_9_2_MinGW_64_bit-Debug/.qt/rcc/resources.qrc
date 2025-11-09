@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="images/resources.qrc">C:/project/qt/mqtttest/images/resources.qrc</file>
+  </qresource>
+</RCC>
+

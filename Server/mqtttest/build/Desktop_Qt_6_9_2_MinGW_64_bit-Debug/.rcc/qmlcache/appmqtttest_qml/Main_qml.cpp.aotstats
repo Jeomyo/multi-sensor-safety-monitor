@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 210,
+                        "durationMicroseconds": 216,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 7
@@ -14,50 +14,34 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 13
+                        "line": 16
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
-                        "line": 24
+                        "line": 27
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 26,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 25
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
                         "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
-                        "line": 31
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name text",
                         "functionName": "onClicked",
-                        "line": 32
+                        "line": 28
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
-                        "line": 38
+                        "line": 34
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,31 +49,47 @@
                         "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name text",
                         "functionName": "onClicked",
-                        "line": 39
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 22,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 29,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 42
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 34,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 107,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "sourceComponent",
-                        "line": 54
+                        "line": 57
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 52
+                        "line": 55
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 38,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 78
+                        "line": 81
                     },
                     {
                         "codegenSuccessful": true,
@@ -97,7 +97,7 @@
                         "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 79
+                        "line": 82
                     },
                     {
                         "codegenSuccessful": true,
@@ -105,79 +105,23 @@
                         "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 86
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 110,
-                        "errorMessage": "",
-                        "functionName": "x",
-                        "line": 101
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 82,
-                        "errorMessage": "",
-                        "functionName": "y",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 91,
-                        "errorMessage": "",
-                        "functionName": "x",
-                        "line": 111
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 83,
-                        "errorMessage": "",
-                        "functionName": "y",
-                        "line": 112
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 42,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"visible\".",
-                        "functionName": "visible",
-                        "line": 126
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 59,
-                        "durationMicroseconds": 31,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 128
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 42,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"visible\".",
-                        "functionName": "visible",
-                        "line": 139
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 59,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 141
+                        "line": 89
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "fillMode",
-                        "line": 153
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "Cannot access value for name workerAWearingHelmet",
+                        "functionName": "visible",
+                        "line": 119
                     },
                     {
                         "codegenSuccessful": false,
@@ -185,15 +129,87 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"visible\".",
                         "functionName": "visible",
-                        "line": 154
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 62,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 123
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name workerAWearingHelmet",
+                        "functionName": "visible",
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"visible\".",
+                        "functionName": "visible",
+                        "line": 133
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 65,
+                        "durationMicroseconds": 34,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 135
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 19,
+                        "errorMessage": "Cannot access value for name workerBWearingHelmet",
+                        "functionName": "visible",
+                        "line": 148
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"visible\".",
+                        "functionName": "visible",
+                        "line": 150
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 59,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 156
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name workerBWearingHelmet",
+                        "functionName": "visible",
+                        "line": 160
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"visible\".",
+                        "functionName": "visible",
+                        "line": 162
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 59,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 164
                     },
                     {
                         "codegenSuccessful": true,
@@ -201,36 +217,28 @@
                         "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 167
+                        "line": 175
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 55,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 176
+                        "line": 184
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 189
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 63,
-                        "durationMicroseconds": 58,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
                         "line": 197
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 63,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 205
@@ -238,7 +246,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 63,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 213
@@ -249,12 +257,12 @@
                         "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 220
+                        "line": 221
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 63,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 228
@@ -262,10 +270,18 @@
                     {
                         "codegenSuccessful": true,
                         "column": 63,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 235
+                        "line": 236
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 63,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 243
                     }
                 ],
                 "filePath": "C:/project/qt/mqtttest/qml/Main.qml"

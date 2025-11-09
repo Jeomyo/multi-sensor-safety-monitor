@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 111,
                         "errorMessage": "Cannot access value for name backend",
                         "functionName": "target",
                         "line": 20
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 9,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Cannot retrieve a non-object type by ID: stack",
                         "functionName": "onLoginSuccess",
                         "line": 21
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 9,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "onLoginFailed",
                         "line": 26

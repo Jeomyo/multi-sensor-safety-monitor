@@ -684,6 +684,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeRCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
+  "C:/project/qt/mqtttest/images/resources.qrc"
   )
 
 # The corresponding makefile is:
@@ -701,6 +702,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   ".qt/rcc/appmqtttest_raw_qml_0_extra_qmldirs.qrc"
   "mqtttest/qmldir"
   "CMakeFiles/appmqtttest_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/appmqtttest_autogen.dir/AutoRcc_resources_4UGIYD6VGQ_Info.json"
   ".qt/QtDeploySupport.cmake"
   "qmltypes/appmqtttest_foreign_types.txt"
   ".rcc/qmllint/appmqtttest.rsp"

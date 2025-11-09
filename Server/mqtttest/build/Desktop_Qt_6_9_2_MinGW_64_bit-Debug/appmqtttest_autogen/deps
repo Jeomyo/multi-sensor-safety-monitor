@@ -1055,5 +1055,6 @@ appmqtttest_autogen/timestamp: \
 	C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appmqtttest_autogen/moc_predefs.h \
+	C:/project/qt/mqtttest/images/resources.qrc \
 	C:/project/qt/mqtttest/main.cpp \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

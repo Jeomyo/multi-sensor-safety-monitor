@@ -7,6 +7,9 @@ Rectangle {
     anchors.fill: parent
     color: "#202531"
 
+    property bool workerAWearingHelmet: false
+    property bool workerBWearingHelmet: true
+
     property string selectedMenu: "대시보드 홈"
 
     RowLayout {
@@ -92,27 +95,18 @@ Rectangle {
                         border.width: 2
                     }
 
-                    // 🧱 장애물 1
-                    Rectangle {
-                        width: 160
-                        height: 80
-                        color: "white"
-                        radius: 4
-                        x: factoryArea.x + 120
-                        y: factoryArea.y + 250
+                    Image {
+                        source: "qrc:/images/map.png"
+                        width: 550
+                        height: 350
+                        x: 120
+                        y: 100
+                        smooth: true
+                        visible: true
+                        fillMode: Image.PreserveAspectFit
                     }
 
-                    // 🧱 장애물 2
-                    Rectangle {
-                        width: 200
-                        height: 100
-                        color: "white"
-                        radius: 4
-                        x: factoryArea.x + 400
-                        y: factoryArea.y + 120
-                    }
-
-                    // 🔴 작업자 A (안전모 미착용)
+                    // 작업자 A
                     Rectangle {
                         width: 20
                         height: 20
@@ -120,40 +114,54 @@ Rectangle {
                         color: "red"
                         border.color: "white"
                         border.width: 2
-                        x: 300
+                        x: 350
                         y: 300
+                        visible: !workerAWearingHelmet
 
-                        ToolTip.visible: ma.containsMouse
+                        ToolTip.visible: mared.containsMouse
                         ToolTip.text: "작업자 A (안전모 미착용)"
-                        MouseArea { id: ma; anchors.fill: parent; hoverEnabled: true }
+                        MouseArea { id: mared; anchors.fill: parent; hoverEnabled: true }
+                    }
+                    Text {
+                        text: "👷‍"
+                        color: "white"
+                        font.pixelSize: 22
+                        x: 350
+                        y: 300
+                        visible: !workerAWearingHelmet
+                        anchors.topMargin: 30
+                        ToolTip.visible: mahelmet.containsMouse
+                        ToolTip.text: "작업자 B (안전모 착용)"
+                        MouseArea { id: mahelmet; anchors.fill: parent; hoverEnabled: true }
                     }
 
-                    // 👷‍ 작업자 B (안전모 착용)
+                    // 작업자 B
+                    Rectangle {
+                        width: 20
+                        height: 20
+                        radius: 10
+                        color: "red"
+                        border.color: "white"
+                        border.width: 2
+                        x: 400
+                        y: 300
+                        visible: !workerBWearingHelmet
+
+                        ToolTip.visible: mbred.containsMouse
+                        ToolTip.text: "작업자 A (안전모 미착용)"
+                        MouseArea { id: mbred; anchors.fill: parent; hoverEnabled: true }
+                    }
                     Text {
                         text: "👷‍"
                         color: "white"
                         font.pixelSize: 22
                         x: 400
                         y: 300
+                        visible: !workerBWearingHelmet
                         anchors.topMargin: 30
-                        ToolTip.visible: mb.containsMouse
+                        ToolTip.visible: mbhelmet.containsMouse
                         ToolTip.text: "작업자 B (안전모 착용)"
-                        MouseArea { id: mb; anchors.fill: parent; hoverEnabled: true }
-                    }
-
-                    // 🪖 안전모 이미지
-                    Image {
-                        source: "qrc:/images/helmet.png"
-                        width: 32
-                        height: 32
-                        x: 420
-                        y: 295
-                        smooth: true
-                        visible: true
-                        fillMode: Image.PreserveAspectFit
-                        ToolTip.visible: mc.containsMouse
-                        ToolTip.text: "작업자 B 안전모 착용"
-                        MouseArea { id: mc; anchors.fill: parent; hoverEnabled: true }
+                        MouseArea { id: mbhelmet; anchors.fill: parent; hoverEnabled: true }
                     }
                 }
             }

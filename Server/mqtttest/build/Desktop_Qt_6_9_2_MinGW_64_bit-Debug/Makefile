@@ -323,6 +323,30 @@ appmqtttest_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appmqtttest_autogen.dir\build.make CMakeFiles/appmqtttest_autogen.dir/build
 .PHONY : appmqtttest_autogen/fast
 
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.obj: appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.obj
+
+# target to build an object file
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appmqtttest.dir\build.make CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.obj
+
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.i: appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.i
+
+# target to preprocess a source file
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appmqtttest.dir\build.make CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.i
+
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.s: appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.s
+
+# target to generate assembly for a file
+appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appmqtttest.dir\build.make CMakeFiles/appmqtttest.dir/appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s
+.PHONY : appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.cpp.s
+
 appmqtttest_autogen/mocs_compilation.obj: appmqtttest_autogen/mocs_compilation.cpp.obj
 .PHONY : appmqtttest_autogen/mocs_compilation.obj
 
@@ -683,6 +707,9 @@ help:
 	@echo ... appmqtttest_qmltyperegistration
 	@echo ... module_appmqtttest_aotstats_target
 	@echo ... appmqtttest
+	@echo ... appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.obj
+	@echo ... appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.i
+	@echo ... appmqtttest_autogen/4UGIYD6VGQ/qrc_resources.s
 	@echo ... appmqtttest_autogen/mocs_compilation.obj
 	@echo ... appmqtttest_autogen/mocs_compilation.i
 	@echo ... appmqtttest_autogen/mocs_compilation.s

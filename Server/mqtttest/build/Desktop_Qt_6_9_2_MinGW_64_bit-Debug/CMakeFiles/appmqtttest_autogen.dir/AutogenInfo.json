@@ -963,7 +963,8 @@
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in",
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in",
-		"C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appmqtttest_conf.cmake"
+		"C:/project/qt/mqtttest/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appmqtttest_conf.cmake",
+		"C:/project/qt/mqtttest/images/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/project/qt/mqtttest",
 	"CROSS_CONFIG" : false,
