@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 250,
+                        "durationMicroseconds": 665,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 18
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 261,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 19
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 26
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "fillMode",
                         "line": 43
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 110,
                         "errorMessage": "Cannot access value for name workerAWearingHelmet",
                         "functionName": "visible",
                         "line": 56
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 138,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 60
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 67,
                         "errorMessage": "Cannot access value for name workerAWearingHelmet",
                         "functionName": "visible",
                         "line": 68
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 49,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 72
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 54,
                         "errorMessage": "Cannot access value for name workerBWearingHelmet",
                         "functionName": "visible",
                         "line": 85
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 89
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 49,
                         "errorMessage": "Cannot access value for name workerBWearingHelmet",
                         "functionName": "visible",
                         "line": 97
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 49,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 101

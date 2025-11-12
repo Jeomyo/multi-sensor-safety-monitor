@@ -6,6 +6,7 @@ C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appqtproject_a
   C:/Qt/6.9.2/mingw_64/include/QtCore/QHash \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QIODevice \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QList \
+  C:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QMetaType \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QPair \

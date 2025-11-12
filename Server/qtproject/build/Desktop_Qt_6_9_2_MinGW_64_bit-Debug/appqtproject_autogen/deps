@@ -5,6 +5,7 @@ appqtproject_autogen/timestamp: \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QHash \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QIODevice \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QList \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QMetaType \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QPair \
@@ -1046,6 +1047,7 @@ appqtproject_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/project/qt/qtproject/CMakeLists.txt \
+	C:/project/qt/qtproject/accounts.json \
 	C:/project/qt/qtproject/backend.cpp \
 	C:/project/qt/qtproject/backend.h \
 	C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appqtproject_conf.cmake \

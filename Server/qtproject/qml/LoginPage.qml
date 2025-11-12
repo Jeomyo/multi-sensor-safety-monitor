@@ -84,6 +84,27 @@ Rectangle {
                 font.pixelSize: 14
                 Layout.alignment: Qt.AlignHCenter
             }
+
+            SequentialAnimation {
+                id: fadeAnim
+                running: false
+                PropertyAnimation { target: statusText; property: "opacity"; from: 0; to: 1; duration: 200 }
+                PauseAnimation { duration: 2000 }
+                PropertyAnimation { target: statusText; property: "opacity"; from: 1; to: 0.3; duration: 600 }
+            }
         }
+        // ✅ Backend 시그널 연결
+        Connections {
+            target: backend
+
+            // 로그인 실패 시
+            function onLoginFailed() {
+                statusText.text = "로그인 실패"
+                statusText.color = "red"
+                fadeAnim.start()
+            }
+        }
+
+
     }
 }

@@ -403,6 +403,8 @@ CMakeFiles/appqtproject.dir/appqtproject_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qssl.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QFlags \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/q20algorithm.h \

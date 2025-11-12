@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QtMqtt/QMqttClient>
+#include <QMap>
 
 class Backend : public QObject
 {
@@ -17,7 +18,9 @@ public:
     void setupMqtt();
 
 private:
-    QMqttClient *client;
+    void loadAccountsFromFile();
+    QMap<QString, QString> accounts;
+    QMqttClient *client = nullptr;
 
 signals:
     void loginSuccess(); // 로그인 성공 신호

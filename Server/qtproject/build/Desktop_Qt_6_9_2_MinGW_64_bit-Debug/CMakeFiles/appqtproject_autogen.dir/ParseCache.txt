@@ -8,6 +8,7 @@ C:/project/qt/qtproject/backend.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QHash
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QIODevice
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QList
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QMetaType
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QObject
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QPair

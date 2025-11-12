@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 198,
+                        "durationMicroseconds": 431,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 393,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 12
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 13
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 16
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 106,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 20
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 30
@@ -70,10 +70,42 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 85
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 157,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 155,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 93
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "target",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 13,
+                        "durationMicroseconds": 567,
+                        "errorMessage": "",
+                        "functionName": "onLoginFailed",
+                        "line": 101
                     }
                 ],
                 "filePath": "C:/project/qt/qtproject/qml/LoginPage.qml"

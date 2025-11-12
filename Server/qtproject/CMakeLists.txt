@@ -50,3 +50,7 @@ set_target_properties(appqtproject PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+
+configure_file(${CMAKE_SOURCE_DIR}/accounts.json
+               ${CMAKE_CURRENT_BINARY_DIR}/accounts.json
+               COPYONLY)

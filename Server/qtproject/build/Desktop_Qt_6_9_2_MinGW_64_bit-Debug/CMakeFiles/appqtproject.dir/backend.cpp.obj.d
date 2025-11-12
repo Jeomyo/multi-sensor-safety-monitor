@@ -401,6 +401,56 @@ CMakeFiles/appqtproject.dir/backend.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qssl.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QFlags \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.9.2/mingw_64/include/QtMqtt/QMqttTopicFilter \
- C:/Qt/6.9.2/mingw_64/include/QtMqtt/qmqtttopicfilter.h
+ C:/Qt/6.9.2/mingw_64/include/QtMqtt/qmqtttopicfilter.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QFile \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfiledevice.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h
