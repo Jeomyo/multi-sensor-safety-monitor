@@ -1,0 +1,14 @@
+--resource
+C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_qtproject.qrc
+--resource
+C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appqtproject_raw_qml_0.qrc
+--resource
+C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appqtproject_raw_qml_0_extra_qmldirs.qrc
+/qtproject/qml/AppWindow.qml
+/qtproject/qml/LoginPage.qml
+/qtproject/qml/Main.qml
+/qtproject/qml/DashboardPage.qml
+/qtproject/qml/NavigationButton.qml
+/qtproject/qml/GaugeView.qml
+/qtproject/qml/MapPage.qml
+/qtproject/qml/AnalysisPage.qml

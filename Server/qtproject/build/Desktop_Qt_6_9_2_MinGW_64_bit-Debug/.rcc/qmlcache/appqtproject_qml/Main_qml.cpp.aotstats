@@ -1,0 +1,92 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 31
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 103,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "sourceComponent",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 52
+                    }
+                ],
+                "filePath": "C:/project/qt/qtproject/qml/Main.qml"
+            }
+        ],
+        "moduleId": "qtproject(appqtproject)"
+    }
+]

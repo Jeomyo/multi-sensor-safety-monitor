@@ -1,0 +1,13 @@
+module qtproject
+typeinfo appqtproject.qmltypes
+prefer :/qtproject/
+AppWindow 1.0 qml/AppWindow.qml
+LoginPage 1.0 qml/LoginPage.qml
+Main 1.0 qml/Main.qml
+DashboardPage 1.0 qml/DashboardPage.qml
+NavigationButton 1.0 qml/NavigationButton.qml
+GaugeView 1.0 qml/GaugeView.qml
+MapPage 1.0 qml/MapPage.qml
+AnalysisPage 1.0 qml/AnalysisPage.qml
+depends QtQuick
+

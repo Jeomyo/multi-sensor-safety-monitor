@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/qtproject/">
+    <file alias="qml/AppWindow.qml">C:/project/qt/qtproject/qml/AppWindow.qml</file>
+    <file alias="qml/LoginPage.qml">C:/project/qt/qtproject/qml/LoginPage.qml</file>
+    <file alias="qml/Main.qml">C:/project/qt/qtproject/qml/Main.qml</file>
+    <file alias="qml/DashboardPage.qml">C:/project/qt/qtproject/qml/DashboardPage.qml</file>
+    <file alias="qml/NavigationButton.qml">C:/project/qt/qtproject/qml/NavigationButton.qml</file>
+    <file alias="qml/GaugeView.qml">C:/project/qt/qtproject/qml/GaugeView.qml</file>
+    <file alias="qml/MapPage.qml">C:/project/qt/qtproject/qml/MapPage.qml</file>
+    <file alias="qml/AnalysisPage.qml">C:/project/qt/qtproject/qml/AnalysisPage.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,84 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 229,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 16
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 41,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 89,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 91,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 60
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 71,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 75
+                    }
+                ],
+                "filePath": "C:/project/qt/qtproject/qml/AnalysisPage.qml"
+            }
+        ],
+        "moduleId": "qtproject(appqtproject)"
+    }
+]

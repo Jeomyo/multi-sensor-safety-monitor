@@ -1,0 +1,26 @@
+{
+	"BUILD_DIR" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appqtproject_autogen",
+	"CMAKE_BINARY_DIR" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/project/qt/qtproject",
+	"CMAKE_SOURCE_DIR" : "C:/project/qt/qtproject",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "MinGW Makefiles",
+	"INCLUDE_DIR" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appqtproject_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/project/qt/qtproject/images/helmet.png",
+		"C:/project/qt/qtproject/images/map.png"
+	],
+	"LOCK_FILE" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appqtproject_autogen.dir/AutoRcc_resources_4UGIYD6VGQ_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "4UGIYD6VGQ",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.9.2/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/project/qt/qtproject/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appqtproject_autogen.dir/AutoRcc_resources_4UGIYD6VGQ_Used.txt",
+	"SOURCE" : "C:/project/qt/qtproject/images/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
