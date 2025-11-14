@@ -233,39 +233,91 @@ public :
                 // ---- (3) 단일 UDS(V2) 전송: track_id 포함
                 sendObjectsUDS_V2(tracks, results, _frame_count, _dstSize._width, _dstSize._height);
 
-                // ---- (4) 프리뷰 이미지: 디텍션 박스 + Track ID 텍스트 오버레이
+                // ---- (4) 프리뷰 이미지: 디텍션 박스만 그리고, person에 대해서만 고유 track_id를 1:1로 표시
                 outputImg = _vStream.GetOutputStream(results);
 
-                // Track ID 그리기 (tlwh 기준)
-                for (const auto& t : tracks) {
-                    if (!t->isActivated()) continue;
-                    const auto& r = t->getRect();
-                    int x = static_cast<int>(r.x());
-                    int y = static_cast<int>(r.y());
-                    int w = static_cast<int>(r.width());
-                    int h = static_cast<int>(r.height());
-                    int tid = static_cast<int>(t->getTrackId());
+                // COCO 기준 person=0 (필요 시 변경)
+                const int PERSON_CLASS_ID = 5;
 
-                    // 박스 라인(초록)
-                    cv::rectangle(outputImg, cv::Rect(x,y,w,h), cv::Scalar(0,255,0), 2);
+                // IoU 함수
+                auto iou = [](float ax, float ay, float aw, float ah,
+                            float bx, float by, float bw, float bh)->float {
+                    float ax2 = ax + aw, ay2 = ay + ah, bx2 = bx + bw, by2 = by + bh;
+                    float ix = std::max(ax, bx);
+                    float iy = std::max(ay, by);
+                    float ix2 = std::min(ax2, bx2);
+                    float iy2 = std::min(ay2, by2);
+                    float iw = std::max(0.0f, ix2 - ix);
+                    float ih = std::max(0.0f, iy2 - iy);
+                    float inter = iw * ih;
+                    float uni = aw * ah + bw * bh - inter + 1e-6f;
+                    return inter / uni;
+                };
 
-                    // 라벨 텍스트: "#<track_id>"
-                    std::string tag = "#" + std::to_string(tid);
-                    int base = 0;
-                    const int font = cv::FONT_HERSHEY_SIMPLEX;
-                    const double scale = 0.6;
-                    const int thickness = 2;
-                    cv::Size ts = cv::getTextSize(tag, font, scale, thickness, &base);
+                // 이미 사용된 트랙 ID는 재사용 금지 → 중복 라벨 방지
+                std::unordered_set<int> used_track_ids;
 
-                    // 텍스트 배경(반투명 검정 박스)
-                    int tx = std::max(0, x);
-                    int ty = std::max(0, y - ts.height - 4);
-                    cv::rectangle(outputImg,
-                                  cv::Rect(tx, std::max(0, ty), ts.width + 8, ts.height + 6),
-                                  cv::Scalar(0,0,0), cv::FILLED);
-                    // 텍스트(초록)
-                    cv::putText(outputImg, tag, cv::Point(tx + 4, ty + ts.height + 1),
-                                font, scale, cv::Scalar(0,255,0), thickness, cv::LINE_AA);
+                const int font = cv::FONT_HERSHEY_SIMPLEX;
+                const double scale = 0.6;
+                const int thickness = 2;
+
+                // person 디텍션만 순회
+                for (const auto& d : results._detections) {
+                    if (static_cast<int>(d._classId) != PERSON_CLASS_ID) continue;
+
+                    float dx = d._bbox._xmin;
+                    float dy = d._bbox._ymin;
+                    float dw = d._bbox._width;
+                    float dh = d._bbox._height;
+
+                    // 가장 IoU 높은 "미사용" 트랙 찾기
+                    float best_iou = 0.0f;
+                    int best_tid = -1;
+
+                    for (const auto& t : tracks) {
+                        if (!t->isActivated()) continue;
+
+                        int tid = static_cast<int>(t->getTrackId());
+                        if (used_track_ids.find(tid) != used_track_ids.end()) continue; // 이미 다른 디텍션에 배정됨
+
+                        const auto& r = t->getRect(); // tlwh
+                        float ov = iou(dx, dy, dw, dh, r.x(), r.y(), r.width(), r.height());
+                        if (ov > best_iou) {
+                            best_iou = ov;
+                            best_tid = tid;
+                        }
+                    }
+
+                    // 충분히 겹칠 때만 표기 + 트랙 ID 1회만 사용
+                    if (best_iou >= 0.3f && best_tid >= 0) {
+                        used_track_ids.insert(best_tid);
+
+                        std::string tag = std::to_string(best_tid);
+                        int x = static_cast<int>(dx);
+                        int y = static_cast<int>(dy);
+
+                        int base = 0;
+                        cv::Size ts = cv::getTextSize(tag, font, scale, thickness, &base);
+                        int tx = std::max(0, x);
+                        int ty = std::max(0, y - ts.height - 4);
+
+                        cv::rectangle(
+                            outputImg,
+                            cv::Rect(tx, std::max(0, ty), ts.width + 8, ts.height + 6),
+                            cv::Scalar(0, 0, 0),
+                            cv::FILLED
+                        );
+                        cv::putText(
+                            outputImg,
+                            tag,
+                            cv::Point(tx + 4, ty + ts.height + 1),
+                            font,
+                            scale,
+                            cv::Scalar(0, 255, 0),
+                            thickness,
+                            cv::LINE_AA
+                        );
+                    }
                 }
 
                 // ---- (5) 프리뷰 JPEG 전송 (Throttle)
@@ -323,8 +375,8 @@ public :
 private:
     // ---- Objects(V2: track 포함) UDS 전송 ----
     void sendObjectsUDS_V2(const std::vector<byte_track::BYTETracker::STrackPtr>& tracks,
-                           const dxapp::common::DetectObject& dets_for_label_fallback,
-                           uint64_t seq_id, int img_w, int img_h)
+                        const dxapp::common::DetectObject& dets_for_label_fallback,
+                        uint64_t seq_id, int img_w, int img_h)
     {
         if (detSock.sock < 0) return;
 
@@ -343,10 +395,9 @@ private:
         std::memcpy(buf.data(), &H, sizeof(DxHdr));
         auto* O = reinterpret_cast<DxObjV2*>(buf.data() + sizeof(DxHdr));
 
-        // (옵션) det기반 라벨/점수 보강 — 필요 없으면 이 블록 통째로 제거 가능
         const auto& dets = dets_for_label_fallback._detections;
         auto iou = [](float ax, float ay, float aw, float ah,
-                      float bx, float by, float bw, float bh)->float {
+                    float bx, float by, float bw, float bh)->float {
             float ax2=ax+aw, ay2=ay+ah, bx2=bx+bw, by2=by+bh;
             float ix = std::max(ax, bx);
             float iy = std::max(ay, by);
@@ -360,6 +411,8 @@ private:
             return inter/uni;
         };
 
+        const int PERSON_CLASS_ID = 5; 
+
         for (size_t i = 0; i < tracks.size(); ++i)
         {
             const auto& t = tracks[i];
@@ -371,21 +424,35 @@ private:
             v.w = r.width();
             v.h = r.height();
 
-            v.score    = t->getScore(); // 기본 track score
-            v.label    = 0xFFFFFFFFu;   // 기본 비움
-            v.track_id = static_cast<uint32_t>(t->getTrackId());
+            // 기본값
+            v.score    = t->getScore();
+            v.label    = 0xFFFFFFFFu;       // label 없는 상태
+            v.track_id = 0xFFFFFFFFu;       // ★ 기본은 "트랙 없음"으로
 
-            float best_iou = 0.0f; int best_cls = -1; float best_conf = 0.0f;
+            float best_iou = 0.0f;
+            int   best_cls = -1;
+            float best_conf = 0.0f;
+
             for (const auto& d : dets)
             {
                 float iouv = iou(v.x, v.y, v.w, v.h,
-                                 d._bbox._xmin, d._bbox._ymin, d._bbox._width, d._bbox._height);
-                if (iouv > best_iou) { best_iou = iouv; best_cls = d._classId; best_conf = d._conf; }
+                                d._bbox._xmin, d._bbox._ymin, d._bbox._width, d._bbox._height);
+                if (iouv > best_iou) {
+                    best_iou  = iouv;
+                    best_cls  = d._classId;
+                    best_conf = d._conf;
+                }
             }
+
             if (best_iou >= 0.3f && best_cls >= 0)
             {
                 v.label = static_cast<uint32_t>(best_cls);
-                // v.score = best_conf; // 라벨 신뢰도를 쓰고 싶으면 활성화
+                // v.score = best_conf; // 원하면 이걸로 덮어써도 되고
+
+                // ★ 여기서 사람 클래스인 경우에만 track_id 유효하게 채운다
+                if (best_cls == PERSON_CLASS_ID) {
+                    v.track_id = static_cast<uint32_t>(t->getTrackId());
+                }
             }
 
             O[i] = v;
@@ -394,12 +461,13 @@ private:
         detSock.send(buf.data(), buf.size());
     }
 
+
     // ---- Preview JPEG 전송 (Throttle) ----
     void sendPreviewJPEG_Throttled(const cv::Mat& bgr, uint64_t seq_id, int img_w, int img_h)
     {
         if (prevSock.sock < 0) return;
 
-        const int kPreviewHz = 10;
+        const int kPreviewHz = 12;
         const int kJpegQuality = 60;
 
         auto now = std::chrono::steady_clock::now();
