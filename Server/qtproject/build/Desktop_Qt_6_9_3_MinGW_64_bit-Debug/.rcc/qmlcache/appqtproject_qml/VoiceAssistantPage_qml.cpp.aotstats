@@ -1,0 +1,76 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "target",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 9,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "onLlmSummaryReady",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 147,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 33
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 91,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 80
+                    }
+                ],
+                "filePath": "C:/project/qt/qtproject/qml/VoiceAssistantPage.qml"
+            }
+        ],
+        "moduleId": "qtproject(appqtproject)"
+    }
+]

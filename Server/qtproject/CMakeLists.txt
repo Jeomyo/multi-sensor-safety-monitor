@@ -29,6 +29,7 @@ qt_add_qml_module(appqtproject
         qml/GaugeView.qml
         QML_FILES qml/MapPage.qml
         QML_FILES qml/AnalysisPage.qml
+        QML_FILES qml/VoiceAssistantPage.qml
 
 )
 

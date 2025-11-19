@@ -1,0 +1,156 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 209,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 381,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "text",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 142,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 36
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 57
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 64
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 72
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 79
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 284,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "onClicked",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "sourceComponent",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 98
+                    }
+                ],
+                "filePath": "C:/project/qt/qtproject/qml/Main.qml"
+            }
+        ],
+        "moduleId": "qtproject(appqtproject)"
+    }
+]

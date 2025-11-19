@@ -74,7 +74,7 @@ Rectangle {
 
                 NavigationButton {
                     text: "로그아웃"
-                    x: 20; y: 400
+                    x: 20; y: 480
                     onClicked: backend.relaunchApp()
                 }
             }

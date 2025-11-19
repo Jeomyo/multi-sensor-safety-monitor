@@ -15,9 +15,17 @@ public:
     explicit Backend(QObject *parent = nullptr); // main.cpp에서 사용하는 Backend 클래스
     Q_INVOKABLE void login(const QString &id, const QString &pw); // 로그인용
     Q_INVOKABLE void updateData(double newValue); // mqtt 테스트용
+    Q_INVOKABLE void startVoiceCommand(); // 음성 명령 시작
+
     void setupMqtt(); // mqtt 설정 함수
     QString currentTime() const { return m_currentTime; }
     Q_INVOKABLE void relaunchApp(); // 재실행용 함수
+
+private slots:
+    // MQTT 메시지 수신 슬롯
+    void onMqttMessageReceived(const QByteArray &message, const QMqttTopicName &topic);
+    // MQTT 연결 끊김 처리 슬롯
+    void onMqttDisconnected();
 
 private:
     void loadAccountsFromFile();
@@ -34,6 +42,8 @@ signals:
     void newMqttValue(QString value); // 받은 mqtt 값 신호
 
     void currentTimeChanged(); // 시간 바뀌었다는 신호
+
+    void llmSummaryReady(const QString &summaryText);
 };
 
 #endif // BACKEND_H
