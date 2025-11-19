@@ -31,6 +31,12 @@
                     "index": 6,
                     "name": "updateData",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "relaunchApp",
+                    "returnType": "void"
                 }
             ],
             "object": true,

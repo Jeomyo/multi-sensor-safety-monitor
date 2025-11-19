@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 208,
+                        "durationMicroseconds": 192,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 7
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 298,
+                        "durationMicroseconds": 247,
                         "errorMessage": "Cannot access value for name backend",
                         "functionName": "text",
                         "line": 26
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 27
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 28
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 36
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 38
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
                         "line": 57
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
                         "line": 64
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name text",
                         "functionName": "onClicked",
                         "line": 65
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "isSelected",
                         "line": 71
@@ -109,19 +109,27 @@
                     },
                     {
                         "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 150,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "onClicked",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessful": false,
                         "column": 38,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 112,
                         "errorMessage": "Cannot access value for name selectedMenu",
                         "functionName": "sourceComponent",
-                        "line": 87
+                        "line": 93
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 85
+                        "line": 91
                     }
                 ],
                 "filePath": "C:/project/qt/qtproject/qml/Main.qml"

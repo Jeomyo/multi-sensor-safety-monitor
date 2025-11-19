@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 302,
+                        "durationMicroseconds": 350,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 89,
                         "errorMessage": "Cannot access value for name backend",
                         "functionName": "target",
                         "line": 13
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 34
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 46
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 60
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 61

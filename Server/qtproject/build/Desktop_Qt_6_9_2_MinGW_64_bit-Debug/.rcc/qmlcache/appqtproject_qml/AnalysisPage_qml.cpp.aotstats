@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 190,
+                        "durationMicroseconds": 246,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 7
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 29
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 73,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 37
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 45
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 53
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 60
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 68
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 75

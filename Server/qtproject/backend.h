@@ -10,12 +10,14 @@ class Backend : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString currentTime READ currentTime NOTIFY currentTimeChanged) // 현재 시간 데이터 받아오기
+
 public:
     explicit Backend(QObject *parent = nullptr); // main.cpp에서 사용하는 Backend 클래스
     Q_INVOKABLE void login(const QString &id, const QString &pw); // 로그인용
     Q_INVOKABLE void updateData(double newValue); // mqtt 테스트용
     void setupMqtt(); // mqtt 설정 함수
     QString currentTime() const { return m_currentTime; }
+    Q_INVOKABLE void relaunchApp(); // 재실행용 함수
 
 private:
     void loadAccountsFromFile();

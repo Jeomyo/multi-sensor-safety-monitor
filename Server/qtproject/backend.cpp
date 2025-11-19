@@ -8,6 +8,8 @@
 #include <QDateTime>
 #include <QTimer>
 #include <QDir>
+#include <QCoreApplication>
+#include <QProcess>
 
 // Backend 클래스
 Backend::Backend(QObject *parent)
@@ -92,7 +94,8 @@ void Backend::loadAccountsFromFile()
 // 로그인 정보 기록
 void Backend::writeLoginLog(const QString &id, const QString &pw, bool success)
 {
-    QFile file("logins.json"); // 로그 저장 공간
+    QString logPath = QCoreApplication::applicationDirPath() + "/../../log/logins.json";
+    QFile file(logPath);
 
     QJsonArray logArray;
 
@@ -156,4 +159,13 @@ void Backend::setupMqtt()
             });
 
     client->connectToHost();
+}
+
+void Backend::relaunchApp()
+{
+    QString program = QCoreApplication::applicationFilePath();
+    QStringList args;
+
+    QProcess::startDetached(program, args);
+    QCoreApplication::quit();
 }

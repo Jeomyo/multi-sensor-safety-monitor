@@ -468,4 +468,12 @@ CMakeFiles/appqtproject.dir/backend.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qdirlisting.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfileinfo.h \
- C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QCoreApplication \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcoreapplication.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcoreevent.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qnativeinterface.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcoreapplication.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QProcess \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qprocess.h

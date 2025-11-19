@@ -71,6 +71,12 @@ Rectangle {
                     isSelected: selectedMenu === text
                     onClicked: selectedMenu = text
                 }
+
+                NavigationButton {
+                    text: "로그아웃"
+                    x: 20; y: 400
+                    onClicked: backend.relaunchApp()
+                }
             }
 
             // 🚀 오른쪽 메인 화면 (Loader 방식)
