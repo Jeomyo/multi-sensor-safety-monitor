@@ -7,4 +7,4 @@
     id : ajw     pw : ajw
     id : sunmaan pw : sunmaan
     id : park    pw : park
-    id : lee     id : lee
+    id : lee     pw : lee
