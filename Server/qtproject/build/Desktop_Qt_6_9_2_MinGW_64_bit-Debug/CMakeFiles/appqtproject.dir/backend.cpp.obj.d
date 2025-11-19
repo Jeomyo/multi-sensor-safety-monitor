@@ -453,4 +453,19 @@ CMakeFiles/appqtproject.dir/backend.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray \
- C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QDateTime \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qtimer.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qabstracteventdispatcher.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qeventloop.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qelapsedtimer.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QDir \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdir.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdirlisting.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfileinfo.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h

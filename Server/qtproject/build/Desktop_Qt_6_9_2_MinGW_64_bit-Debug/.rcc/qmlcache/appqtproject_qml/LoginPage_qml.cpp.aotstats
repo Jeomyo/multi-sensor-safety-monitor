@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 431,
+                        "durationMicroseconds": 187,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 393,
+                        "durationMicroseconds": 136,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 12
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 202,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 13
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 16
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 20
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 30
@@ -57,7 +57,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"echoMode\".",
                         "functionName": "echoMode",
-                        "line": 49
+                        "line": 50
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,47 +65,47 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 68
+                        "line": 69
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 46,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 85
+                        "line": 86
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 91
+                        "line": 92
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 48,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 93
+                        "line": 94
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 184,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot access value for name backend",
                         "functionName": "target",
-                        "line": 98
+                        "line": 99
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 567,
+                        "durationMicroseconds": 212,
                         "errorMessage": "",
                         "functionName": "onLoginFailed",
-                        "line": 101
+                        "line": 102
                     }
                 ],
                 "filePath": "C:/project/qt/qtproject/qml/LoginPage.qml"

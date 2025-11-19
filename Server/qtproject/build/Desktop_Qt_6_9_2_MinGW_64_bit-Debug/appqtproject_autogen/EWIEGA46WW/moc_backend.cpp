@@ -45,11 +45,13 @@ template <> constexpr inline auto Backend::qt_create_metaobjectdata<qt_meta_tag_
         "gauge1ValueChanged",
         "value",
         "newMqttValue",
+        "currentTimeChanged",
         "login",
         "id",
         "pw",
         "updateData",
-        "newValue"
+        "newValue",
+        "currentTime"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -65,16 +67,20 @@ template <> constexpr inline auto Backend::qt_create_metaobjectdata<qt_meta_tag_
         QtMocHelpers::SignalData<void(QString)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 5 },
         }}),
+        // Signal 'currentTimeChanged'
+        QtMocHelpers::SignalData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'login'
-        QtMocHelpers::MethodData<void(const QString &, const QString &)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 8 }, { QMetaType::QString, 9 },
+        QtMocHelpers::MethodData<void(const QString &, const QString &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 9 }, { QMetaType::QString, 10 },
         }}),
         // Method 'updateData'
-        QtMocHelpers::MethodData<void(double)>(10, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Double, 11 },
+        QtMocHelpers::MethodData<void(double)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Double, 12 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
+        // property 'currentTime'
+        QtMocHelpers::PropertyData<QString>(13, QMetaType::QString, QMC::DefaultPropertyFlags, 4),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -100,8 +106,9 @@ void Backend::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 1: _t->loginFailed(); break;
         case 2: _t->gauge1ValueChanged((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 3: _t->newMqttValue((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 5: _t->updateData((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 4: _t->currentTimeChanged(); break;
+        case 5: _t->login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 6: _t->updateData((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     }
@@ -114,6 +121,15 @@ void Backend::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
             return;
         if (QtMocHelpers::indexOfMethod<void (Backend::*)(QString )>(_a, &Backend::newMqttValue, 3))
             return;
+        if (QtMocHelpers::indexOfMethod<void (Backend::*)()>(_a, &Backend::currentTimeChanged, 4))
+            return;
+    }
+    if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast<QString*>(_v) = _t->currentTime(); break;
+        default: break;
+        }
     }
 }
 
@@ -136,14 +152,20 @@ int Backend::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
+    }
+    if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
+        qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
     }
     return _id;
 }
@@ -170,5 +192,11 @@ void Backend::gauge1ValueChanged(double _t1)
 void Backend::newMqttValue(QString _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
+}
+
+// SIGNAL 4
+void Backend::currentTimeChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 QT_WARNING_POP

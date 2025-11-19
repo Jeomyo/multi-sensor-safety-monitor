@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 513,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 7
@@ -14,74 +14,114 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 179,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 13
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 159,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
-                        "line": 24
+                        "column": 23,
+                        "durationMicroseconds": 298,
+                        "errorMessage": "Cannot access value for name backend",
+                        "functionName": "text",
+                        "line": 26
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 90,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 25
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 27
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 86,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
-                        "line": 31
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 79,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 32
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "isSelected",
-                        "line": 38
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 83,
-                        "errorMessage": "Cannot access value for name text",
-                        "functionName": "onClicked",
-                        "line": 39
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 34,
-                        "durationMicroseconds": 336,
-                        "errorMessage": "Cannot access value for name selectedMenu",
-                        "functionName": "sourceComponent",
-                        "line": 54
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 28
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 36
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 57
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 64
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "isSelected",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 22,
+                        "errorMessage": "Cannot access value for name text",
+                        "functionName": "onClicked",
+                        "line": 72
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "Cannot access value for name selectedMenu",
+                        "functionName": "sourceComponent",
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 52
+                        "line": 85
                     }
                 ],
                 "filePath": "C:/project/qt/qtproject/qml/Main.qml"
