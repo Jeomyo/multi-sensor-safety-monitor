@@ -1,0 +1,34 @@
+[
+  {
+    "x": -3.7,
+    "y": 3.0,
+    "angle": 18,
+    "width": 0.5,
+    "height": 0.4,
+    "image": "file:///C:/QT_QML/project_QML_1/images/bookcase.png"
+  },
+  {
+    "x": -3.2,
+    "y": 2.9,
+    "angle": 18,
+    "width": 0.5,
+    "height": 0.4,
+    "image": "file:///C:/QT_QML/project_QML_1/images/bookcase.png"
+  },
+  {
+    "x": -4.5,
+    "y": 0.2,
+    "angle": 20,
+    "width": 0.5,
+    "height": 0.4,
+    "image": "file:///C:/QT_QML/project_QML_1/images/bookcase.png"
+  },
+  {
+    "x": 0.0,
+    "y": 1.8,
+    "angle": 18,
+    "width": 2,
+    "height": 1,
+    "image": "file:///C:/QT_QML/project_QML_1/images/table.png"
+  }
+]
