@@ -1,0 +1,16 @@
+--bare
+-I
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug
+-I
+C:/Qt/6.9.3/mingw_64/qml
+--resource
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qmake_project_QML_1.qrc
+--resource
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/appproject_QML_1_raw_qml_0.qrc
+C:/QT_QML/project_QML_1/Main.qml
+C:/QT_QML/project_QML_1/Gauge.qml
+C:/QT_QML/project_QML_1/MapPage.qml
+C:/QT_QML/project_QML_1/Streaming.qml
+C:/QT_QML/project_QML_1/DashBoard.qml
+C:/QT_QML/project_QML_1/MapPage_2.qml
+C:/QT_QML/project_QML_1/SensorGraph.qml

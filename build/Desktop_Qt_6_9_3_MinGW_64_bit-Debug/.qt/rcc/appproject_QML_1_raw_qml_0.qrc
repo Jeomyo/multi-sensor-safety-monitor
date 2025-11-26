@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/qt/qml/project_QML_1/">
+    <file alias="Main.qml">C:/QT_QML/project_QML_1/Main.qml</file>
+    <file alias="Gauge.qml">C:/QT_QML/project_QML_1/Gauge.qml</file>
+    <file alias="MapPage.qml">C:/QT_QML/project_QML_1/MapPage.qml</file>
+    <file alias="Streaming.qml">C:/QT_QML/project_QML_1/Streaming.qml</file>
+    <file alias="DashBoard.qml">C:/QT_QML/project_QML_1/DashBoard.qml</file>
+    <file alias="MapPage_2.qml">C:/QT_QML/project_QML_1/MapPage_2.qml</file>
+    <file alias="SensorGraph.qml">C:/QT_QML/project_QML_1/SensorGraph.qml</file>
+    <file alias="resources.qrc">C:/QT_QML/project_QML_1/resources.qrc</file>
+  </qresource>
+</RCC>
+

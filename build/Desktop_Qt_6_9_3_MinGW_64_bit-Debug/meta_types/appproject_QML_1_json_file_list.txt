@@ -1,0 +1,2 @@
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appproject_QML_1_autogen/include/../EWIEGA46WW/moc_SystemMonitor.cpp.json
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appproject_QML_1_autogen/include/../EWIEGA46WW/moc_sensor_data_provider.cpp.json

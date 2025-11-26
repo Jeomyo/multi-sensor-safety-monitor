@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_appproject_QML_1_FILE C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appproject_QML_1.exe)
+set(__QT_DEPLOY_TARGET_appproject_QML_1_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_appproject_QML_1_RUNTIME_DLLS C:/Qt/6.9.3/mingw_64/bin/Qt6Quick.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Mqtt.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Multimedia.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6QmlMeta.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6QmlWorkerScript.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6QmlModels.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Qml.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Network.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.9.3/mingw_64/bin/Qt6Core.dll)

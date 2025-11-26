@@ -1,0 +1,12 @@
+module project_QML_1
+typeinfo appproject_QML_1.qmltypes
+prefer :/qt/qml/project_QML_1/
+Main 1.0 Main.qml
+Gauge 1.0 Gauge.qml
+MapPage 1.0 MapPage.qml
+Streaming 1.0 Streaming.qml
+DashBoard 1.0 DashBoard.qml
+MapPage_2 1.0 MapPage_2.qml
+SensorGraph 1.0 SensorGraph.qml
+depends QtQuick
+

@@ -1,0 +1,14 @@
+-rootPath
+C:/QT_QML/project_QML_1
+-cmake-output
+-output-file
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/qml_imports/appproject_QML_1_conf.cmake
+-importPath
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/project_QML_1
+-importPath
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.9.3/mingw_64/qml
+-qrcFiles
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qmake_project_QML_1.qrc
+C:/QT_QML/project_QML_1/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/appproject_QML_1_raw_qml_0.qrc
