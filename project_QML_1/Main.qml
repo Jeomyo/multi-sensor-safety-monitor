@@ -24,7 +24,7 @@ Item {
         // ===========================
         ColumnLayout {
             Layout.fillWidth: true
-            Layout.preferredHeight: parent.height * 0.15
+            Layout.preferredHeight: root.height * 0.15
             Layout.topMargin: 10
             spacing: 6
 
@@ -34,7 +34,7 @@ Item {
             RowLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.preferredHeight: parent.height * 0.15
+                Layout.fillHeight: true
                 spacing: 5
 
                 Item {
@@ -82,7 +82,7 @@ Item {
             RowLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.preferredHeight: parent.height * 0.07
+                //Layout.preferredHeight: parent.height * 0.07
                 spacing: 40
 
                 // SYSTEM ONLINE + 초록 Pulse
@@ -100,7 +100,8 @@ Item {
                     Item {
                         width: 12
                         height: 12
-                        anchors.verticalCenter: statusText.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
+
 
                         // 실제 표시되는 원
                         Rectangle {
@@ -160,23 +161,24 @@ Item {
         // ===========================
         // 메인 3단 구조
         // ===========================
-        Row {
+        RowLayout {
             Layout.fillWidth: true
-            Layout.fillHeight: true
+            //Layout.fillHeight: true
+            Layout.preferredHeight: root.height * 0.70
             spacing: 10
             // ===========================
             // 좌측 — 환경 센서 패널
             // ===========================
             Rectangle {
-                width: parent.width * 0.18
-                height: parent.height
+                Layout.preferredWidth: root.width * 0.18
+                Layout.fillHeight: true
                 radius: 8
                 color: "#1E1F22"
                 border.color: "#0324fc"
                 border.width: 1
 
                 DashBoard {
-                    anchors.fill: parent
+                    anchors.fill: parent                    // 여기서는 anchors OK
                     anchors.margins: 12
                 }
             }
@@ -185,8 +187,8 @@ Item {
             // 중앙 — 맵 패널
             // ===========================
             Rectangle {
-                width: parent.width * 0.6
-                height: parent.height
+                Layout.preferredWidth: root.width * 0.60   // ✔ Layout.* 로 통일
+                Layout.fillHeight: true
                 radius: 8
                 color: "#1E1F22"
                 border.color: "#0324fc"
@@ -203,8 +205,8 @@ Item {
             // 우측 — AI Insights
             // ===========================
             Rectangle {
-                width: parent.width * 0.2
-                height: parent.height
+                Layout.preferredWidth: root.width * 0.2   // 약간 여유 있게
+                Layout.fillHeight: true
                 radius: 8
                 color: "#1E1F22"
                 border.color: "#0324fc"
@@ -212,7 +214,7 @@ Item {
 
                 Column {
                     id: insightsPanel
-                    anchors.fill: parent
+                    anchors.fill: parent       // ✔ 여기서는 Layout.* 대신 anchors 사용
                     anchors.margins: 16
                     spacing: 10
                     property bool micActive: false
@@ -519,7 +521,7 @@ Item {
         // ===========================
         Rectangle {
             Layout.fillWidth: true
-            Layout.preferredHeight: parent.height * 0.08
+            Layout.preferredHeight: root.height * 0.08
             color: "#101214"     // 배경 (필요하면 변경)
             //border.color: "#0324fc"
             //border.width: 1
@@ -536,7 +538,7 @@ Item {
                 Column {
                     width: 70
                     spacing: 0
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                     Image {
                         source: "qrc:/icons/dashboard.png"
@@ -557,7 +559,7 @@ Item {
                 Column {
                     width: 70
                     spacing: 4
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                     Image {
                         source: "qrc:/icons/report.png"
@@ -577,7 +579,7 @@ Item {
                 Column {
                     width: 70
                     spacing: 4
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                     Image {
                         source: "qrc:/icons/setting.png"
@@ -597,7 +599,7 @@ Item {
                 Column {
                     width: 70
                     spacing: 4
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                     Image {
                         source: "qrc:/icons/history.png"

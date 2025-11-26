@@ -456,9 +456,9 @@ Item {
         //---------------------------------------------
         Connections {
             target: mapArea
-            onSelectedWorkerIdChanged: {
-                mapArea.updateSelectedFromModel()
-                mapArea.drawTrajectory()
+            function onSelectedWorkerIdChanged() {
+                    mapArea.updateSelectedFromModel()
+                    mapArea.drawTrajectory()
             }
         }
 
@@ -623,7 +623,9 @@ Item {
 
             Connections {
                 target: mapArea
-                onSelectedWorkerDataChanged: popup.updatePosition()
+                function onSelectedWorkerDataChanged() {
+                        popup.updatePosition()
+                }
             }
         }
 
