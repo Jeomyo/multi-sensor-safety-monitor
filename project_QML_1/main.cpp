@@ -6,6 +6,7 @@
 #include <QMediaPlayer>
 #include "sensor_data_provider.h"
 #include "SystemMonitor.h"
+#include "LoginManager.h"
 
 SystemMonitor* g_systemMonitor = nullptr;
 
@@ -46,11 +47,13 @@ int main(int argc, char *argv[])
     // ✅ 객체 생명주기 고정
     static SensorDataProvider sensorProvider;
     static SystemMonitor systemMonitor;
+    static LoginManager loginManager;
     g_systemMonitor = &systemMonitor;
 
     // ✅ QML 등록
     engine.rootContext()->setContextProperty("sensorProvider", &sensorProvider);
     engine.rootContext()->setContextProperty("systemMonitor", &systemMonitor);
+    engine.rootContext()->setContextProperty("loginManager", &loginManager);
 
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed, &app,
                      []() { QCoreApplication::exit(-1); },

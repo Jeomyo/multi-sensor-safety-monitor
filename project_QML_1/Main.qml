@@ -9,16 +9,16 @@ ApplicationWindow {
     height: 900
     title: "Digital Twin Safety Monitoring"
     // 1) Worker 수 저장 변수
-     property int workerCount: 0
+    property int workerCount: 0
 
-     // 2) MQTT worker 업데이트를 직접 받는 부분
-     Connections {
-         target: sensorProvider
+    // 2) MQTT worker 업데이트를 직접 받는 부분
+    Connections {
+        target: sensorProvider
 
-         function onWorkersUpdated(workers) {
-         root.workerCount = workers.length // 총 작업자 수 업데이트
-         }
-     }
+        function onWorkersUpdated(workers) {
+        root.workerCount = workers.length // 총 작업자 수 업데이트
+        }
+    }
 
     Rectangle {
         anchors.fill: parent
@@ -33,6 +33,7 @@ ApplicationWindow {
         // 상단 — RTSP 영역
         // ===========================
         ColumnLayout {
+            id: mainDashboard
             Layout.fillWidth: true
             Layout.preferredHeight: root.height * 0.15
             Layout.topMargin: 10
@@ -209,5 +210,12 @@ ApplicationWindow {
                 anchors.fill: parent
             }
         }
+    }
+
+    LoginPage {
+        id: loginPage
+        anchors.fill: parent
+        visible: true      // 기본값: 로그인창 보임
+        z: 9999            // 모든 UI 위로 올라오게
     }
 }

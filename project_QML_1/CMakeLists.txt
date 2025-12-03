@@ -36,6 +36,8 @@ qt_add_qml_module(appproject_QML_1
         RESOURCES icons/resources.qrc
         QML_FILES InsightsPanel.qml
         QML_FILES BottomNavigationBar.qml
+        SOURCES LoginManager.h LoginManager.cpp
+        QML_FILES LoginPage.qml
 )
 
 # ✅ 속성 설정

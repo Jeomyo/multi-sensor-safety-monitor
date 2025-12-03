@@ -9,6 +9,8 @@
         <file>safe.png</file>
         <file>red.png</file>
         <file>red_500.png</file>
+        <file>bg_login.png</file>
+        <file>login_panel.png</file>
     </qresource>
 </RCC>
 
