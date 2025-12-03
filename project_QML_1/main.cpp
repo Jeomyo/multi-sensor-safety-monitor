@@ -64,6 +64,7 @@ int main(int argc, char *argv[])
     engine.loadFromModule("project_QML_1", "Main");
 
     // ✅ [추가] QML에서 MediaPlayer 찾아서 RTSP FPS 연결
+    /*
     if (!engine.rootObjects().isEmpty()) {
         QObject* root = engine.rootObjects().first();
 
@@ -92,6 +93,7 @@ int main(int argc, char *argv[])
             qWarning() << "⚠️ streamingPage 객체를 찾지 못함";
         }
     }
+    */
 
     return app.exec();
 }

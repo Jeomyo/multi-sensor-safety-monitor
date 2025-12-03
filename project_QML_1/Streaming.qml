@@ -1,25 +1,16 @@
-import QtQuick
-import QtQuick.Controls
-import QtMultimedia
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtMultimedia 6.5   // 버전 명시해주는 거 추천
 
 Item {
     id: streamingPage
     anchors.fill: parent
 
+    // 외부에서 넘겨줄 값
     property string sourceUrl: ""
-    //color: "#1E1F25"
-    /*
-    Text {
-        text: "RTSP 실시간 스트리밍"
-        anchors.bottom: videoContainer.top
-        anchors.horizontalCenter: videoContainer.horizontalCenter
-        anchors.bottomMargin: 10
-        color: "white"
-        font.pixelSize: 20
-    }
-    */
+    property bool rtspEnable: false   // 집에서는 false, CCTV 쓸 때 true
 
-    // 🎥 RTSP 영상 출력
+    // 🎥 RTSP 영상 출력 영역
     VideoOutput {
         id: videoOutput
         anchors.fill: parent
@@ -27,16 +18,12 @@ Item {
         fillMode: VideoOutput.PreserveAspectFit
     }
 
-    // 🎬 RTSP 스트림 플레이어
+    // 🎬 실제 스트림 재생기
     MediaPlayer {
         id: player
         videoOutput: videoOutput
-        // ⚠️ VLC 송출 주소 정확히 일치시켜야 합니다.
-        //source: "rtsp://127.0.0.1:8554/stream"
-        //source: "rtsp://admin:qw12qw12%21@192.168.0.64:554/Streaming/Channels/101"
-        //source: "rtsp://admin:qw12qw12%21@192.168.0.64:554/Streaming/Channels/102"
-        source: sourceUrl
-        autoPlay: true
+        source: rtspEnable && sourceUrl !== "" ? sourceUrl : ""
+        autoPlay: rtspEnable
         loops: MediaPlayer.Infinite
 
         onErrorOccurred: (err, errorString) => {
@@ -44,28 +31,23 @@ Item {
         }
     }
 
-    // ▶️ 제어 버튼
-    /*
-    Row {
-        anchors.bottom: parent.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottomMargin: 10
-        spacing: 10
-
-        Button {
-            text: player.playbackState === MediaPlayer.PlayingState ? "일시정지" : "재생"
-            onClicked: {
-                if (player.playbackState === MediaPlayer.PlayingState)
-                    player.pause()
-                else
-                    player.play()
-            }
-        }
-
-        Button {
-            text: "정지"
-            onClicked: player.stop()
+    // rtspEnable 값이 바뀔 때마다 재생/정지 제어
+    onRtspEnableChanged: {
+        if (rtspEnable && sourceUrl !== "") {
+            console.log("▶️ RTSP 시작:", sourceUrl)
+            player.play()
+        } else {
+            console.log("⏹ RTSP 중지")
+            player.stop()
         }
     }
-    */
+
+    // 주소가 변경될 때도 자동으로 다시 시작
+    onSourceUrlChanged: {
+        if (rtspEnable && sourceUrl !== "") {
+            console.log("🔄 RTSP URL 변경 → 재생:", sourceUrl)
+            player.stop()
+            player.play()
+        }
+    }
 }

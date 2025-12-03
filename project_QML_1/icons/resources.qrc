@@ -6,5 +6,9 @@
         <file>history.png</file>
         <file>mic.png</file>
         <file>comp2.jpg</file>
+        <file>safe.png</file>
+        <file>red.png</file>
+        <file>red_500.png</file>
     </qresource>
 </RCC>
+
