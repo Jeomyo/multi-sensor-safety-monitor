@@ -11,6 +11,7 @@
         <file>red_500.png</file>
         <file>bg_login.png</file>
         <file>login_panel.png</file>
+        <file>users.json</file>
     </qresource>
 </RCC>
 
