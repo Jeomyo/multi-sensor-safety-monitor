@@ -45,13 +45,13 @@ class WorkerMqttPublisher(Node):
 
         # ---------- Parameters ----------
         self.declare_parameter('pose_topic', '/dx/person_gated_with_id_map')
-        self.declare_parameter('mqtt_host', '192.168.0.74')
+        self.declare_parameter('mqtt_host', '192.168.0.117')
         self.declare_parameter('mqtt_port', 1883)
         self.declare_parameter('mqtt_topic', '/worker/data')
         self.declare_parameter('mqtt_qos', 1)
         # 슬롯 이름 (길이가 곧 슬롯 개수)
         self.declare_parameter('names', ['작업자A', '작업자B', '작업자C'])
-        self.declare_parameter('publish_rate_limit_hz', 20.0)
+        self.declare_parameter('publish_rate_limit_hz', 5.0)
 
         self.pose_topic = self.get_parameter('pose_topic').get_parameter_value().string_value
         self.mqtt_host = self.get_parameter('mqtt_host').get_parameter_value().string_value
