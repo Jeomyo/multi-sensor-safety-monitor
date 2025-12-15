@@ -14,7 +14,7 @@ from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
 from std_msgs.msg import Header
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, Pose, PoseArray
 from dx_msgs.msg import PersonGatedWithID, PersonGatedWithIDArray
 
 from tf2_ros import Buffer, TransformListener, TransformException
@@ -52,6 +52,12 @@ class PersonWithIDToMap(Node):
             10
         )
 
+        self.pub_posearray = self.create_publisher(
+            PoseArray,
+            '/dx/person_gated_map',   # RViz에서 볼 토픽 이름
+            10
+        )
+
         self.get_logger().info(
             f"[PersonWithID → MAP] listening on {self.topic_in}, publishing to {self.topic_out}"
         )
@@ -77,23 +83,28 @@ class PersonWithIDToMap(Node):
             )
             return
 
-        # Output message
+        # Output messages
         out = PersonGatedWithIDArray()
         out.header.stamp = stamp
         out.header.frame_id = self.target_frame
 
+        pose_array = PoseArray()
+        pose_array.header.stamp = stamp
+        pose_array.header.frame_id = self.target_frame
+
         for p in msg.persons:
             try:
-                ps = PoseStamped()
-                ps.header = msg.header
-                ps.pose = p.pose
+                # p.pose: geometry_msgs.msg.Pose
+                pose_map = do_transform_pose(p.pose, trans)  # Pose → Pose
 
-                ps_map = do_transform_pose(ps, trans)
+                # RViz용 PoseArray에 추가
+                pose_array.poses.append(pose_map)
 
+                # with_id_map용 메시지
                 q = PersonGatedWithID()
                 q.header.stamp = stamp
                 q.header.frame_id = self.target_frame
-                q.pose = ps_map.pose
+                q.pose = pose_map
                 q.track_id = p.track_id
                 q.helmet = p.helmet
                 q.vest = p.vest
@@ -105,7 +116,15 @@ class PersonWithIDToMap(Node):
                 self.get_logger().warn(f"Transform fail: {ex}")
                 continue
 
+        # 퍼블리시
         self.pub.publish(out)
+        self.pub_posearray.publish(pose_array)
+
+        # 디버그용
+        self.get_logger().debug(
+            f"Published {len(pose_array.poses)} poses to /dx/person_gated_map"
+        )
+
 
 
 def main():
