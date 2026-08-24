@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+*.o
+*.exe
+fall_snapshots/
+analysis_queue/
+processed_jobs/
+archived_jobs/
+daily_reports/
+backup_temp/
